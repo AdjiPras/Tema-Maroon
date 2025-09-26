@@ -1,0 +1,166 @@
+<body data-bs-spy="scroll" data-bs-target="#navBar" id="weddingHome" style="background-color: #ffffff;">
+
+    <!-- ===================== SPINNER LOADING ===================== -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow" role="status" style="color: rgb(56, 36, 9) !important;"></div>
+    </div>
+
+    <!-- ===================== HOME UTAMA ===================== -->
+    <div id="homewedding" class="container-fluid position-relative py-5" 
+        style="height: 800px; background-image:url('/static/img/home1.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="container position-relative py-0 text-center">
+            <img src="{{ url_for ('static', filename='img/icon-jawa.png') }}" alt="" class="img-responsive wow fadeInUp" data-wow-delay="0.3s"
+                style="width: 170px; height: auto; margin: 0 auto; padding-top: 0px;" />
+
+            <div class="mx-auto text-center mb-5 headernya" style="max-width: 800px;">
+                <h1 class="wow fadeInUp" data-wow-delay="0.3s" 
+                    style="font-weight: bold; margin-top: 20px; color: rgb(56, 36, 9) !important; font-size: 30px !important;">
+                Rini &amp; Dhika
+                </h1>
+
+                <h4 style="margin-top: 30px; margin-bottom: 10px; font-weight: bold; font-size: 17px; 
+                        color: rgb(56, 36, 9) !important; text-shadow: var(--shadow) !important; 
+                        font-family: 'Clambake October Six', sans-serif;">
+                Kepada Bapak/Ibu/Saudara/i,
+                <br/><br/>
+                <span style="color: #fff !important; font-weight: bold; font-size: 25px !important; font-family: 'Clambake October Six', sans-serif;"></span>
+                </h4>
+
+                <a href="#weddings" id="buka" onclick="enableScroll()" class="wow fadeInDown" data-wow-delay="0.3s"
+                style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+                <i class="fa fa-envelope-open"></i> Buka Undangan
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SECTION: WEDDINGS ===================== -->
+    <div id="weddings" class="container-fluid position-relative py-5" 
+        style="height: 850px; background-image:url('/static/img/home2.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="container position-relative py-0 mt-5" style="width: 100%;">
+            <div id="weddings" class="mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                
+                <h4 style="color: rgb(56, 36, 9) !important; font-weight: bold; font-size: 25px !important; margin-top: 330px; 
+                        font-family: 'Clambake October Six', sans-serif !important;">
+                The Wedding Of
+                </h4>
+
+                <h1 style="color: rgb(56, 36, 9) !important; font-size: 35px !important; margin-top: 20px; font-weight: bold;">
+                Rini &amp; Dhika
+                </h1>
+
+                <h4 data-wow-delay="0.3s" style="margin-top: 0px; font-size: 17px; color: rgb(56, 36, 9) !important; 
+                                                text-shadow: var(--shadow) !important; font-family: 'Clambake October Six', sans-serif;">
+                Kami berharap Bapak/Ibu/Saudara/i untuk menjadi bagian dari hari istimewa kami.
+                <br/><br/>
+                </h4>
+
+                <hr style="width: 300px; margin: 0 auto; color: rgb(56, 36, 9) !important; border: 2px solid rgb(56, 36, 9) !important;" />
+                <br/>
+
+                <span class="simply-countdown"></span>
+                <br/>
+
+                <a href="#weddingAbouts" id="savedate" class="wow fadeInUp" data-wow-delay="0.3s"
+                style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+                <i class="fa fa-calendar-check"></i> Save the Date
+                </a>
+            </div>
+        </div>
+    </div>
+
+  <!-- ===================== SECTION: WEDDING ABOUT ===================== -->
+  <div id="weddingAbout" class="container-fluid position-relative py-0" 
+       style="height: 1200px; background-image:url('/static/img/28.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="mx-auto text-center mb-2 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px; padding-top: 40px;">
+      <h2 class="text-primary" style="font-weight: bold; color: rgb(56, 36, 9) !important;">Sugeng Rawuh</h2>
+      <h4 class="text-dark mb-0" style="font-size: 16px; font-weight: bold; padding-top: 20px; font-family: 'Clambake October Six', sans-serif !important;">
+        Dengan segala hormat, kami mengundang Bapak/Ibu/Saudara/i, untuk hadir pada acara penikahan kami.
+      </h4>
+    </div>
+
+    <div class="mx-auto text-center mb-0 wow fadeInRight" data-wow-delay="0.1s" style="max-width: 800px;">
+        <img alt="" class="img-responsive wow fadeInUp" data-wow-delay="0.3s" src="{{ url_for ('static', filename='img/wanita-frame.png') }}" style="width: 300px; height: auto;"/>
+        <h5 class="text-primary mb-0" style="font-weight: bold; font-size: 30px !important; color: rgb(56, 36, 9) !important; font-weight: bold;">
+        Rini Kurniasari
+        </h5>
+        <h4 class="text-dark mb-0" style="font-weight: bold; font-size: 16px; font-family: 'Clambake October Six', sans-serif !important;">
+        Putri dari Bapak Eko Setyadi &amp; Ibu Rosiana
+        </h4>
+    </div>
+    <h1 class="mx-auto text-center text-primary mb-0 wow fadeInUp" style="font-weight: bold; font-size: 40px !important; 
+        color: rgb(56, 36, 9) !important; font-weight: bold; margin-top: 40px;"> &amp;
+    </h1>
+    <div class="mx-auto text-center mb-0 wow fadeInLeft" data-wow-delay="0.1s" style="max-width: 800px; margin-top: 40px;">
+        <img alt="" class="img-responsive wow fadeInUp" data-wow-delay="0.3s" src="{{ url_for ('static', filename='img/pria-frame.png') }}" style="width: 300px; height: auto;"/>
+        <h5 class="text-primary mb-0" style="font-weight: bold; font-size: 30px !important; color: rgb(56, 36, 9) !important; font-weight: bold;">
+        Dhika Ardyansah
+        </h5>
+        <h4 class="text-dark mb-0" style="font-weight: bold; font-size: 16px; font-family: 'Clambake October Six', sans-serif !important;">
+        Putra dari Bapak Agung Pambudi &amp; Ibu Dwi Agustin
+        </h4>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION: SAVE THE DATE ===================== -->
+  <div id="weddingAbouts" class="container-fluid position-relative py-0" 
+       style="height: 900px; background-image:url('/static/img/16.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <h3 style="color: rgb(40, 51, 34) !important; padding-bottom: 15px; font-weight: bold;">
+            Akad Nikah
+           </h3>
+           <div class="" style="font-size: 14px; font-family: 'Clambake October Six', sans-serif !important;">
+            <span style="color: rgb(40, 51, 34) !important;font-size: 20px !important; margin-top: 10px;">
+             <i class="icon-clock" style="color: rgb(40, 51, 34) !important;font-size:  20px !important">
+             </i>
+             7.30 WIB - Selesai
+            </span>
+            <br/>
+            <br/>
+            <!-- <span style="color: rgb(40, 51, 34) !important;"></span> -->
+            <span style="color: rgb(40, 51, 34) !important;font-size:  14px !important; margin-top: 10px;">
+             <i class="icon-calendar" style="color: rgb(40, 51, 34) !important;font-size:  17px !important">
+             </i>
+             Minggu, 31 Desember 2023
+            </span>
+            <br/>
+            <span style="color: rgb(40, 51, 34) !important;font-size:  14px !important; margin-top: 10px;">
+             <i class="icon-home" style="color: rgb(40, 51, 34) !important;font-size:  17px !important">
+             </i>
+             RM Pendopo Andaru, Jl. Lawu, Kramat, Nganjuk
+            </span>
+  </div>
+
+  <!-- ===================== SECTION: OUR STORY ===================== -->
+  <div id="fh5co-couple-story" style="background-image:url('/static/img/ceritanya.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <!-- [timeline cerita hubungan] -->
+  </div>
+
+  <!-- ===================== SECTION: GALLERY ===================== -->
+  <div class="container py-0">
+    <!-- [gallery foto & video] -->
+  </div>
+
+  <!-- ===================== SECTION: AYAT SUCI ===================== -->
+  <div class="container position-relative py-0" style="height: 414px; background-image:url('/static/img/bg-ayat.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <!-- [ayat Al-Quran & terjemahan] -->
+  </div>
+
+  <!-- ===================== SECTION: RSVP ===================== -->
+  <div id="rsvpwedding" class="container-fluid RSVP-form py-5" 
+       style="background-image:url('/static/img/bg-rsvp2.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <!-- [form RSVP + iframe data tamu] -->
+  </div>
+
+  <!-- ===================== SECTION: AMPLOP DIGITAL ===================== -->
+  <div id="weddingAbout" class="container-fluid position-relative py-0 pt-4" 
+       style="height: 550px; background-image:url('/static/img/bg-amplop.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <!-- [nomor rekening & kirim hadiah] -->
+  </div>
+
+  <!-- ===================== SECTION: PENUTUP ===================== -->
+  <div class="container-fluid position-relative py-5" 
+       style="height: 840px; background-image:url('/static/img/home2.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <!-- [ucapan terima kasih & kontak designer] -->
+  </div>
+
+</body>

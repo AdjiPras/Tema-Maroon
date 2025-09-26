@@ -1,0 +1,825 @@
+@import url('https://fonts.cdnfonts.com/css/clambake-october-six');
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+ }
+
+ #spinner.show {
+     transition: opacity .8s ease-out, visibility 0s linear .0s;
+     visibility: visible;
+     opacity: 1;
+ }
+/*** Spinner End ***/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.btn-primary-outline-0 {
+    color: var(--bs-white) !important;
+    border: 1px solid var(--bs-primary);
+}
+
+.btn-light-outline-0 {
+    color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-light);
+}
+
+.btn-primary-outline-0:hover {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+    border: 1px solid var(--bs-primary);
+}
+
+.btn-light-outline-0:hover {
+    background: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+    border: 1px solid var(--bs-secondary);
+}
+
+.img-border {
+    border-color: var(--bs-secondary);
+    border-style: double;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 700;
+}
+
+
+/*** Navbar Start ***/
+.sticky-top {
+    transition: 0.5s;
+    background: var(--bs-white);
+}
+
+
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-family: 'Petit Formal Script', cursive;
+    font-weight: 600;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.sticky-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.sticky-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+@media (min-width: 1200px) {
+    .navbar .navbar-collapse .border-top {
+        border-top: none !important;
+    }
+}
+/*** Navbar End ***/
+
+/*** Carousel Start ***/
+.carousel-item {
+    position: relative;
+    min-height: 100vh
+    
+}
+
+.carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item .carousel-caption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4));
+    background-size: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0;
+}
+
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon {
+    background: transparent;
+}
+
+#carouselId .carousel-indicators {
+    padding-bottom: 30px;
+}
+
+#carouselId .carousel-indicators li {
+    border-top: 10px solid var(--bs-white);
+    border-bottom: 10px solid var(--bs-white);
+    border-right: 5px solid var(--bs-white);
+    border-left: 5px solid var(--bs-white);
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+#carouselId .carousel-indicators li.active {
+    background: var(--bs-primary);
+    border-color: var(--bs-primary);
+    border-right: 15px solid var(--bs-primary);
+    border-left: 15px solid var(--bs-primary);
+}
+/*** Carousel End ***/
+
+
+/*** Wedding Story Start ***/
+.story .story-timeline,
+.story .story-timeline .row {
+    position: relative;
+}
+
+.story .story-timeline::before,
+.story .story-timeline::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--bs-secondary);
+    border-radius: 10px;
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%);
+}
+
+.story .story-timeline::after {
+    top: auto;
+    bottom: -7px;
+}
+
+.story .story-timeline .row::after {
+    position: absolute;
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--bs-secondary);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .story .story-timeline::before,
+    .story .story-timeline::after,
+    .story .story-timeline .row::after  {
+        display: none;
+    }
+}
+/*** Wedding Story End ***/
+
+/*** Wedding Date Start ***/
+.wedding-date-bg .wedding-date {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/wedding-date-bg.jpg) center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.wedding-date-bg .wedding-date::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.wedding-date-bg .wedding-date .wedding-date-content {
+    position: relative;
+    z-index: 9;
+}
+/*** Wedding Date End ***/
+
+
+/*** Wedding Timeline Start ***/
+@media (max-width: 576px) {
+    .wedding-timeline .wedding-content .heart-circle {
+        display: none;
+    }
+}
+/*** Wedding Timeline End ***/
+
+
+/*** Gallery Start ***/
+.gallery .gallery-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .gallery-img .hover-style {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+}
+
+.gallery .gallery-img:hover .hover-style {
+    width: auto;
+    height: auto;
+    border: 600px solid rgba(255, 255, 255, 0.3);
+    opacity: 1;
+}
+
+.gallery .gallery-img img {
+    transition: 0.5s;
+}
+
+.gallery .gallery-img:hover img {
+    transform: scale(1.3);
+}
+
+.gallery .gallery-item .gallery-overlay {
+    transition: 0.5s;
+}
+
+.gallery .gallery-item:hover .gallery-overlay {
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.gallery .gallery-img .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 2;
+    
+}
+
+.gallery .gallery-img:hover .search-icon {
+    opacity: 1;
+}
+/*** Gallery End ***/
+
+
+/*** team Start ***/
+.team .team-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .team-item .team-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 4;
+}
+
+.team .team-item:hover .team-content {
+    background: rgba(0, 0, 0, .5);
+}
+
+.team .team-item .team-content {
+    text-align: center;
+}
+
+.team .team-item .team-social {
+    position: absolute;
+    top: -180px;
+    right: 15px;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-social {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+}
+
+.team .team-item .team-img {
+    position: relative;
+    overflow: hidden;
+    border-color: var(--bs-secondary);
+    border-style: double;
+}
+
+.team .team-item .team-img .team-img-main {
+    position: relative;
+    z-index: 3;
+}
+
+.team .team-item .team-img .team-img-main img,
+.team .team-item .team-img .team-img-bg img {
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-img .team-img-main img,
+.team .team-item:hover .team-img .team-img-bg img {
+    transform: scale(1.1);
+}
+/*** Team End ***/
+
+
+/*** Contact Us Start ***/
+.RSVP-form {
+    background: linear-gradient(rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2));
+    object-fit: cover;
+}
+/*** Contact Us End ***/
+
+
+/*** Footer Start ***/
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/footer-bg.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer .footer-item a.btn-link,
+.footer .footer-item p {
+    line-height: 35px;
+    font-size: 17px;
+    color: var(--bs-light);
+    transition: 0.5s;
+}
+
+.footer .footer-item a.btn-link:hover {
+    color: var(--bs-primary);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 992px) {
+    .footer .text-start,
+    .footer .text-center,
+    .footer .text-end {
+        text-align: center !important;
+    }
+}
+/*** Footer End ***/
+
+
+/*** copyright Start ***/
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--bs-dark) !important;
+}
+/*** copyright end ***/
+
+/* BUKA UNDANGAN */
+#buka {
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    color: white !important; 
+    background: radial-gradient(circle at center, #b79f31 0%, #a07a27 70%);
+    transition: background 0.3s ease-in-out;
+}
+
+#buka:hover {
+    color: #a07a27 !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f2dede 50%, #ffffff 100%);
+    text-decoration: none;
+}
+
+/* SAVE THE DATE */
+#savedate {
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    color: white !important; 
+    background: radial-gradient(circle at center, rgb(100, 70, 20) 0%, rgb(56, 36, 9) 70%);
+    transition: background 0.3s ease-in-out;
+}
+
+#savedate:hover {
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    color: rgb(56, 36, 9) !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f2e6d9 50%, #ffffff 100%);
+    text-decoration: none;
+}
+  
+  #lok {
+    font-family: 'Clambake October Six', sans-serif;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    color: white !important; 
+    background-color:  rgb(56, 36, 9)!important;
+  }
+  #lok:hover {
+    font-family: 'Clambake October Six', sans-serif;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    color: rgb(56, 36, 9) !important; 
+    background-color: white !important;
+    text-decoration: none;
+  }
+  
+  #kirim {
+    font-family: 'Clambake October Six', sans-serif;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    color: white !important; 
+    background-color:  rgb(56, 36, 9)!important;
+  }
+  #kirim:hover {
+    font-family: 'Clambake October Six', sans-serif;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    color: rgb(56, 36, 9) !important; 
+    background-color: white !important;
+    text-decoration: none;
+  }
+
+/* Styling container countdown */
+.simply-countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Kotak tiap item */
+.simply-countdown > .simply-section {
+  background: #fff;
+  border-radius: 20px; /* bikin oval */
+  padding: 20px 15px;
+  width: 80px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Angka */
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #a07a27; /* warna emas sesuai tema */
+  display: block;
+}
+
+/* Label Hari / Jam / Menit / Detik */
+.simply-countdown > .simply-section .simply-word {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #74673e;
+  display: block;
+}
+  
+
+.fixed-bottom {
+    position: fixed;
+    margin: 0 auto;
+    bottom: 0;
+    width: 55%;
+    /* padding: 5px; */
+    /* padding-top: 25px; */
+    border-radius: 10px;
+}
+@media screen and (min-width: 1280px) {
+  .fixed-bottom {
+    position: fixed;
+    margin: 0 auto;
+    bottom: 0;
+    width: 18% !important;
+    /* padding: 5px; */
+    /* padding-top: 25px; */
+    border-radius: 10px;
+  }
+}
+
+.navbar {
+    padding: 0.5rem 0.5rem;
+    /* background-color: #000;
+    color: #fff; */
+  }
+  
+  .sosmed:hover {
+    text-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+  }
+
+  
+.timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+    font-family: 'Clambake October Six', sans-serif !important;
+    
+  }
+  .timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 1px;
+    /* background-color: #d4d4d4; */
+    background-color: rgba(255, 255, 255, 0);
+    left: 50%;
+    margin-left: 0px;
+  }
+  @media screen and (max-width: 480px) {
+    .timeline:before {
+      margin-left: -64px;
+    }
+  }
+  .timeline > li {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .timeline > li:before, .timeline > li:after {
+    content: " ";
+    display: table;
+  }
+  .timeline > li:after {
+    clear: both;
+  }
+  .timeline > li > .timeline-panel {
+    width: 40%;
+    float: left;
+    border: 1px solid #d4d4d400;
+    padding: 30px;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 10px;
+  }
+  .timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 80px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+  }
+  .timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 81px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+  }
+  @media screen and (max-width: 480px) {
+    .timeline > li > .timeline-panel {
+      width: 75% !important;
+    }
+    .timeline > li > .timeline-panel:before {
+      top: 30px;
+    }
+    .timeline > li > .timeline-panel:after {
+      top: 31px;
+    }
+  }
+  .timeline > li > .timeline-badge {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    width: 160px;
+    height: 160px;
+    line-height: 50px;
+    font-size: 1.4em;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    margin-left: -80px;
+    background-color: #999999;
+    z-index: 100;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 480px) {
+    .timeline > li > .timeline-badge {
+      width: 60px;
+      height: 60px;
+      margin-left: -20px !important;
+    }
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+  
+  .timeline-title {
+    margin-top: 0;
+    font-family:'Anaktoria', sans-serif;
+    font-weight: 600;
+  }
+  
+  .date {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family:'Alegreya Sans Medium', sans-serif !important;
+  }
+  
+  .timeline-body > p,
+  .timeline-body > ul {
+    margin-bottom: 0;
+    color: rgb(40, 51, 34) !important;
+    font-family:'Alegreya Sans Medium', sans-serif !important;
+  }
+  
+  .timeline-body > p + p {
+    margin-top: 5px;
+  }
+  
+  @media (max-width: 992px) {
+    ul.timeline:before {
+      left: 90px;
+    }
+  
+    ul.timeline > li > .timeline-panel {
+      width: calc(100% - 200px);
+      width: -moz-calc(100% - 200px);
+      width: -webkit-calc(100% - 200px);
+    }
+  
+    ul.timeline > li > .timeline-badge {
+      left: 15px;
+      margin-left: 0;
+      top: 16px;
+    }
+  
+    ul.timeline > li > .timeline-panel {
+      float: right;
+    }
+  
+    ul.timeline > li > .timeline-panel:before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto;
+    }
+  
+    ul.timeline > li > .timeline-panel:after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -14px;
+      right: auto;
+    }
+
+/* ========================================== */
+    .containernya > a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        overflow: hidden;
+      }
+      
+      .containernya > a::after {
+        content: "";
+        background: linear-gradient(transparent,black);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateY(100%);
+        transition-duration: .75s;
+      }
+      
+      .containernya > a:hover::after {
+        transform: translateY(50%);
+      }
+      
+      .containernya > a > * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition-duration: 1s;
+      }
+      
+      .containernya > a:hover > img {
+        transform: scale(1.05);
+      }
+      
+      .containernya {
+        display: grid;
+        grid-gap: var(--gap);
+        grid-template-columns: repeat(auto-fit, minmax(var(--width), 1fr));
+        grid-auto-rows: var(--height);
+        grid-auto-flow: dense;
+      }
+      
+      .horizontal {
+        grid-column: span 2;
+      }
+      
+      .vertical {
+        grid-row: span 2;
+      }
+      
+      .big {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      
