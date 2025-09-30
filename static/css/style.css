@@ -449,13 +449,74 @@
     padding: 15px;
     border-radius: 30px;
     color: white !important; 
-    background: radial-gradient(circle at center, #b79f31 0%, #a07a27 70%);
+    background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
     transition: background 0.3s ease-in-out;
 }
 
 #buka:hover {
-    color: #a07a27 !important; 
-    background: radial-gradient(circle at center, #ffffff 0%, #f2dede 50%, #ffffff 100%);
+    color: #a89b4f !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f2de 50%, #ffffff 100%);
+    text-decoration: none;
+}
+
+/* CALENDAR */
+#calendar { 
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: white !important; 
+    background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+}
+
+#calendar:hover { 
+    color: #a89b4f !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f2de 50%, #ffffff 100%);
+    text-decoration: none;
+}
+
+/* LOKASI */
+#lokasi-btn { 
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: white !important; 
+    background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+}
+
+#lokasi-btn:hover { 
+    color: #a89b4f !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f2de 50%, #ffffff 100%);
+    text-decoration: none;
+}
+
+/* KIRIM PESAN */
+#send-btn { 
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: white !important; 
+    background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    
+    /* Hilangkan tepi hitam */
+    border: none;
+    outline: none;
+}
+#send-btn:hover { 
+    color: #a89b4f !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f2de 50%, #ffffff 100%);
     text-decoration: none;
 }
 
@@ -465,7 +526,7 @@
     padding: 15px;
     border-radius: 30px;
     color: white !important; 
-    background: radial-gradient(circle at center, rgb(100, 70, 20) 0%, rgb(56, 36, 9) 70%);
+    background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
     transition: background 0.3s ease-in-out;
 }
 
@@ -473,7 +534,7 @@
     font-size: 15px;
     padding: 15px;
     border-radius: 30px;
-    color: rgb(56, 36, 9) !important; 
+    color: #a89b4f !important; 
     background: radial-gradient(circle at center, #ffffff 0%, #f2e6d9 50%, #ffffff 100%);
     text-decoration: none;
 }
@@ -496,7 +557,7 @@
     text-decoration: none;
   }
   
-  #kirim {
+  /* #kirim {
     font-family: 'Clambake October Six', sans-serif;
     font-size: 15px;
     padding: 15px;
@@ -512,7 +573,7 @@
     color: rgb(56, 36, 9) !important; 
     background-color: white !important;
     text-decoration: none;
-  }
+  } */
 
 /* Styling container countdown */
 .simply-countdown {
@@ -520,34 +581,41 @@
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
+  font-family:'Alegreya Sans Medium', sans-serif !important;
 }
 
 /* Kotak tiap item */
 .simply-countdown > .simply-section {
   background: #fff;
-  border-radius: 20px; /* bikin oval */
-  padding: 20px 15px;
-  width: 80px;
+  border-radius: 20px; /* oval/rounded */
+  padding: 20px 10px;
+  width: 90px;        /* lebar tetap */
+  height: 100px;      /* tinggi tetap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-sizing: border-box;
 }
 
 /* Angka */
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  color: #a07a27; /* warna emas sesuai tema */
+  color: #a89b4f; /* warna emas sesuai tema */
+  line-height: 1.2;
   display: block;
 }
 
 /* Label Hari / Jam / Menit / Detik */
 .simply-countdown > .simply-section .simply-word {
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 5px;
-  color: #74673e;
+  color: #a89b4f;
   display: block;
 }
-  
 
 .fixed-bottom {
     position: fixed;
@@ -571,7 +639,7 @@
 }
 
 .navbar {
-    padding: 0.5rem 0.5rem;
+    padding: 0.2rem 0.4rem;
     /* background-color: #000;
     color: #fff; */
   }
