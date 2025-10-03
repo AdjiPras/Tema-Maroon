@@ -258,7 +258,7 @@
             top: 60%;              /* agak turun ke bawah */
             left: 50%;
             transform: translateX(-50%);
-            width: 270px;          /* lebih kecil dari konten */
+            width: 250px;          /* lebih kecil dari konten */
             height: 500px;         /* tinggi kotak (atur sesuai kebutuhan) */
             background: rgb(255, 255, 255);
             margin-top: 90px;
@@ -273,6 +273,47 @@
 
             z-index: 1;            /* tetap di belakang konten */
             opacity: 0.95;         /* bisa transparan tipis */
+            }
+
+            .penutup-section {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            padding: 40px 20px 20px 20px;
+            /* background-color: #fff; */
+            }
+
+
+            .footer-custom {
+            /* background-color: #e9e0d1; */
+            padding: 0px 15px 50px 15px;
+            color: #5a4632;
+            font-weight: bold;
+            }
+
+            .footer-custom .sosmed-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 22px;
+            color: #5a4632;
+            transition: color 0.3s;
+            }
+
+            .footer-custom .sosmed-icons a:hover {
+            color: #8a6920;
+            }
+
+            .footer-custom p {
+            margin: 0;
+            font-size: 13px;
+            font-family: 'Alegreya Sans', sans-serif;
+            color: #5a4632;
+            }
+
+            .footer-custom p a {
+            color: #8a6920;
+            text-decoration: none;
+            font-weight: bold;
             }
 
         </style>
@@ -417,7 +458,7 @@
                                     align-items:center; padding:40px 0; position:relative;">
 
                             <!-- Sapaan Awal (tetap di atas) -->
-                            <div class="mx-auto text-center mb-2 mt-0" style="max-width:800px; padding-top:20px;">
+                            <div class="mx-auto text-center mb-2 mt-0" id="mempelai" style="max-width:800px; padding-top:20px;">
                                 <p class="wow zoomIn" data-wow-delay="1.0s"  data-wow-offset="150"
                                  style="margin:0; padding-top: 90px; font-size: 20px; 
                                 font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
@@ -692,12 +733,11 @@
 
                         <!-- UCAPAN & DOA -->
                         <div class="container-fluid RSVP-form py-0" 
-                            id="rsvpwedding" 
                             style="position: relative; margin-top: 110px;">   <!-- tambahin relative biar img absolute bisa ngikut -->
 
                             <!-- Bingkai bunga -->
                             <img src="{{ url_for('static', filename='img/dekor-date.svg') }}" 
-                                alt="bingkai bunga"
+                                alt="bingkai bunga" id="rsvpwedding" 
                                 style="width:390px; height:auto; position:absolute; 
                                     top:-210px; left:50%; transform:translateX(-50%); z-index:1;"/>
 
@@ -719,7 +759,8 @@
                             </div>
 
                             <!-- Form Ucapan Tamu -->
-                            <div class="container py-3" style="border-radius: 0px; background-color: none;">
+                            <div class="container" style="border-radius: 0px; background-color: rgba(231,222,207,0.5);
+                                min-height: 95dvh;">
                                 <div class="row justify-content-center">
                                     <div class="col-md-10">
                                         <div class="p-3 position-relative" style="border-radius: 0px;">
@@ -791,10 +832,15 @@
                                                 src="https://script.google.com/macros/s/AKfycbw8T3B990dFj8OeQNRUAFT8FmDlOrWsAuLRAeQhooUE0YgnKMTfp3nxMsjjUf7mewTJ5w/exec" 
                                                 style="width: 100%; 
                                                     height: 40vh; 
-                                                    margin-top: 20px; 
-                                                    box-shadow: none;
+                                                    margin-top: 20px;
                                                     border-radius: 8px;">
                                             </iframe>
+
+                                            <img src="{{ url_for('static', filename='img/dekor-ucapan.svg') }}" 
+                                                style="width: 400px; height: auto; border-radius: 13px;
+                                                    position: absolute; bottom: -120px; left: 50%; transform: translateX(-50%);
+                                                    z-index: 2;" 
+                                                alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -802,7 +848,7 @@
                         </div>
 
                         <!-- Kirim Hadiah -->
-                        <div id="gift" class="container-fluid position-relative py-0 pt-4" 
+                        <div class="container-fluid position-relative py-0 pt-4" 
                         style="min-height:100dvh; 
                                 width:100%; 
                                 margin:0; 
@@ -817,7 +863,7 @@
                                 >
                                 <!-- <h3 class="display-5 text-primary" style="color: rgb(40, 51, 34) !important;">Amplop Digital</h3> -->
                                 <h5 class="text-primary mb-0" 
-                                    style="font-weight: bold; margin-bottom: 0px; margin-top: 50px; font-size: 30px !important; 
+                                    style="font-weight: bold; margin-bottom: 0px; margin-top: 80px; font-size: 30px !important; 
                                     font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
                                     Kirim Hadiah
                                 </h5>
@@ -920,35 +966,47 @@
 
                         
                         <!-- PENUTUP -->
-                        <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center"
-                            style="position: relative; width: 100%; margin: 0; padding: 40px 20px;">
-
-                            <!-- Foto Pengantin -->
-                            <!-- <img src="{{ url_for('static', filename='img/foto-penutup.svg') }}" 
-                                style="width: 240px; height: 240px;" 
-                                alt="Foto Mempelai"> -->
+                        <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center penutup-section">
 
                             <!-- Ucapan -->
                             <p class="wow fadeInUp" data-wow-delay="0.6s"
                             style="font-family: 'Alegreya Sans', sans-serif; margin-top: 30px; color: #5a4632; 
-                            font-size: 18px; max-width: 700px;">
+                                    font-size: 18px; max-width: 700px;">
                                 Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i 
                                 berkenan hadir untuk memberikan doa restu pada hari bahagia kami. <br><br><br>
-                            <span>Sampai Bertemu di Acara Kami</span>
+                                <span>Sampai Bertemu di Acara Kami</span>
                             </p>
 
                             <!-- Nama Pengantin -->
                             <h1 class="wow fadeInDown" data-wow-delay="0.8s"
-                                style="font-family: 'Tempting', cursive; font-weight: normal; margin-top: 40px; color: #8a6920; font-size: 38px;">
+                                style="font-family: 'Tempting', cursive; font-weight: normal; 
+                                    margin-top: 40px; color: #8a6920; font-size: 38px;">
                                 Rini &amp; Dhika
                             </h1>
 
-                            <!-- Dekorasi bawah (ikut flow, bukan absolute) -->
+                            <!-- Dekorasi bawah -->
                             <img src="{{ url_for('static', filename='img/dekor-penutup.svg') }}" 
                                 class="penutup-dekor"
                                 style="width: 400px; height: auto; margin-top: 0px;" 
                                 alt="">
                         </div>
+
+                        <!-- STRIP GOLD PEMISAH -->
+                        <!-- <div class="gold-separator"></div> -->
+
+                        <!-- FOOTER MIRIP GOODCHOICE -->
+                        <footer class="footer-custom text-center">
+                            <!-- Ikon sosmed -->
+                            <div class="sosmed-icons mb-3">
+                                <a href="#"><i class="fab fa-whatsapp"></i></a> 
+                                082302529354
+                                <!-- <a href="#"><i class="fas fa-globe"></i></a> -->
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                heroezweb
+                            </div>
+                            
+                        </footer>
+
                     </div>
                 </div>
 
@@ -962,15 +1020,16 @@
     
     <!-- ===================== NAVBAR BAWAH (awalnya disembunyikan) ===================== -->
     <nav id="bottomNav" class="fixed-bottom navbar mb-2" 
-        style="display:none; width: 90%; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        style="display:none; width: 260px; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
             background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
             transition: background 0.3s ease-in-out;">
 
+        
         <!-- Tombol mempelai -->
-        <a class="nav-link sosmed" href="#mempelai" 
+        <!-- <a class="nav-link sosmed" href="#mempelai" 
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
             <i class="fa fa-heart" style="color: #ffffff !important; font-size:22px;"></i>
-        </a>
+        </a> -->
 
         <!-- Tombol Save The Date -->
         <a class="nav-link sosmed" href="#savethedate" 
@@ -1002,7 +1061,27 @@
             <i class="fa fa-gift" style="color: #ffffff !important; font-size:22px;"></i>
         </a>
 
+        <!-- ===================== AUDIO PLAYER ===================== -->
+        <div id="audio-container" 
+            style="position: fixed; bottom: 80px; right: 20px; z-index: 1050; display: none;">
+            
+            <audio id="song" loop muted>
+                <source src="{{ url_for('static', filename='song/song2.mp3') }}" type="audio/mpeg"/>
+            </audio>
+
+            <!-- Tombol Play/Pause -->
+            <button id="audio-control" class="audio-btn" 
+                style="background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
+                    transition: background 0.3s ease-in-out; 
+                    width: 50px; height: 50px; border-radius: 50%;
+                    display: flex; justify-content: center; align-items: center;">
+                <i id="audio-icon" class="fa fa-play" style="color: #ffffff !important; font-size:20px;"></i>
+            </button>
+        </div>
+
     </nav>
+
+   
 
     <!-- ===================== BACK TO TOP BUTTON ===================== -->
     <!-- <a class="btn btn-light-outline-0 btn-md-square back-to-top" href="#" 
@@ -1011,19 +1090,7 @@
         <i class="fa fa-arrow-up" style="color: white;"></i>
     </a> -->
 
-    <!-- ===================== AUDIO PLAYER ===================== -->
-    <div id="audio-container" style="display: none;background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
-            transition: background 0.3s ease-in-out;">
-        <audio id="song" loop muted>
-            <source src="{{ url_for('static', filename='song/song2.mp3') }}" type="audio/mpeg"/>
-        </audio>
 
-        <!-- Tombol Play/Pause -->
-        <button id="audio-control" class="audio-btn" style="background: radial-gradient(circle at center,  #a89b4f 0%, #8a6920 70%);
-            transition: background 0.3s ease-in-out; bottom: 100px;">
-            <i id="audio-icon" class="fa fa-play" style="color: #ffffff !important"></i>
-        </button>
-    </div>
 
 </div>
 
