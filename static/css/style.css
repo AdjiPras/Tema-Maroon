@@ -520,6 +520,75 @@
     text-decoration: none;
 }
 
+/* KIRIM HADIAH */
+#toggleGiftBtn { 
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: white !important; 
+    background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    
+    /* Hilangkan tepi hitam */
+    border: none;
+    outline: none;
+}
+#toggleGiftBtn:hover { 
+    color: #a89b4f !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f2de 50%, #ffffff 100%);
+    text-decoration: none;
+}
+
+/* COPY ALAMAT */
+#copyAlamatBtn { 
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: white !important; 
+    background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    
+    /* Hilangkan tepi hitam */
+    border: none;
+    outline: none;
+}
+#copyAlamatBtn:hover { 
+    color: #a89b4f !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f2de 50%, #ffffff 100%);
+    text-decoration: none;
+}
+
+/* COPY REKENING */
+#copyBtn { 
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: white !important; 
+    background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    
+    /* Hilangkan tepi hitam */
+    border: none;
+    outline: none;
+}
+#copyBtn:hover { 
+    color: #a89b4f !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f2de 50%, #ffffff 100%);
+    text-decoration: none;
+}
+
 /* SAVE THE DATE */
 #savedate {
     font-size: 15px;

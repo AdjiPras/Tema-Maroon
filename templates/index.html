@@ -39,10 +39,11 @@
         <script src="{{ url_for ('static', filename='js/simplyCountdown.js') }}">
         </script>
         <!-- Favicon -->
-        <link href="{{ url_for('static', filename='img/foto-mempelai.jpg') }}" rel="shortcut icon"/>
+        <link href="{{ url_for('static', filename='img/icon-url.png') }}" rel="shortcut icon"/>
         </link>
         </link>
 
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
         <style>
@@ -279,7 +280,7 @@
             position: relative;
             width: 100%;
             margin: 0;
-            padding: 40px 20px 20px 20px;
+            padding: 0px 20px 20px 20px;
             /* background-color: #fff; */
             }
 
@@ -314,6 +315,25 @@
             color: #8a6920;
             text-decoration: none;
             font-weight: bold;
+            }
+
+            /* HIDE & SHOW */
+            .fade-box {
+                opacity: 0;
+                transition: opacity 0.5s ease;
+                border-radius: 30px;
+            }
+            .fade-box.show {
+                display: block !important;
+                opacity: 1;
+                margin-bottom: 60px;
+            }
+            #gift {
+                height: 550px; /* lebih pendek saat hide */
+                transition: height 0.8s ease;
+            }
+            #gift.expanded {
+                height: auto; /* otomatis sesuai isi */
             }
 
         </style>
@@ -371,12 +391,12 @@
                             </p>
                             <p class="wow fadeInUp" data-wow-delay="0.6s" 
                                 style="margin-top: 30px; padding:0; font-size: 35px; font-family: 'Tempting', sans-serif;
-                                        color: #8a6920 !important;">
+                                        color: #8a6920 !important; text-shadow:var(--shadow);">
                                 Rini <br> &amp; <br> Dhika
                             </p><br>
                             <h4 style="position: relative; z-index: 10; 
                                     margin-top: 40px;margin-bottom: 30px; padding:0; font-size:17px;
-                                    color: #8a6920 !important; text-shadow:var(--shadow);
+                                    color: #5a4632 !important; text-shadow:var(--shadow);
                                     font-family:'Alegreya Sans', sans-serif !important;">
                                 Kepada Yth. <br> Bapak/Ibu/Saudara/i, <br>
                                 <span id="namatamu" 
@@ -385,7 +405,7 @@
                                     </span>
                             </h4>
                             <a class="wow fadeInDown" data-wow-delay="0.5s" href="#datewedding" id="buka"
-                                style="font-family:'Alegreya Sans', sans-serif; font-weight: 500;
+                                style="font-family:'Alegreya Sans', sans-serif;
                                  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;"
                                 onclick="enableScroll()">
                                 <i class="fa fa-envelope-open"></i>&nbsp;&nbsp;BUKA UNDANGAN
@@ -414,7 +434,7 @@
 
                                 <!-- dekor bawah (belakang box) -->
                                 <img src="{{ url_for('static', filename='img/dekor-ayat-bawah-2.svg') }}" 
-                                    style="width: 400px; height: auto; border-radius: 13px;
+                                    style="width: 360px; height: auto; border-radius: 13px;
                                         position: absolute; bottom: -130px; left: 50%; transform: translateX(-50%);
                                         z-index: 0;"
                                     alt="">
@@ -464,7 +484,7 @@
                                 font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
                                 Assalamu'alaikum Warahmatullahi Wabarakatuh
                                 </p>
-                                <p class="mb-0 p-3" style="color: #74673e; font-size:16px; padding-top:20px; font-family:'Alegreya Sans', sans-serif;">
+                                <p class="mb-0 p-3" style="color: #5a4632 !important; font-size:16px; padding-top:20px; font-family:'Alegreya Sans', sans-serif;">
                                 Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i 
                                 serta kerabat sekalian untuk menghadiri acara pernikahan kami :
                                 </p>
@@ -484,11 +504,13 @@
                                             class="img-responsive foto-wanita wow fadeInUp" data-wow-delay="0.6s"
                                             style="width:230px; padding-top: 40px; height:auto; display:block; margin:0 auto;"/>
 
-                                        <h5 class="text-primary mb-0" style="margin-top: 20px; font-weight:bold; font-size:25px; font-family:'Tempting', sans-serif; color:#8a6920 !important;">
-                                        Rini Kurniasari
+                                        <h5 class="text-primary mb-0" style="margin-top: 20px; font-weight:bold; font-size:20px; 
+                                            font-family:'Tempting', sans-serif; color:#8a6920 !important;
+                                            line-height: 2.0; word-break: break-word;">
+                                        Irmma Dwijayanti, S.Kom., M.Eng.
                                         </h5>
                                         <h4 class="mb-0" style="font-size:16px; font-family:'Alegreya Sans', sans-serif; color:#74673e !important;margin-top: 7px;"> 
-                                        Putri dari Bapak Eko Setyadi &amp; Ibu Rosiana
+                                        Putri Bpk. Serda (Purn.) Riyanto &amp; Ibu Harsih
                                         </h4>
 
                                         <!-- Instagram Icon -->
@@ -515,11 +537,13 @@
                                             class="img-responsive foto-pria wow fadeInUp" data-wow-delay="0.6s"
                                             style="width:230px; padding-top: 40px; height:auto; display:block; margin:0 auto;"/>
 
-                                        <h5 class="text-primary mb-0" style="margin-top: 20px; font-weight:bold; font-size:25px; font-family:'Tempting', sans-serif; color:#8a6920 !important;">
-                                        Dhika Ardyansah
+                                        <h5 class="text-primary mb-0" style="margin-top: 20px; font-weight:bold; font-size:20px; 
+                                            font-family:'Tempting', sans-serif; color:#8a6920 !important;
+                                            line-height: 2.0; word-break: break-word;">
+                                        Moch. Adji Prasetyo, S.Kom.
                                         </h5>
                                         <h4 class="mb-0" style="font-size:16px; font-family:'Alegreya Sans', sans-serif; color:#74673e !important;margin-top: 7px;">
-                                        Putra dari Bapak Agung Pambudi &amp; Ibu Dwi Agustin
+                                        Putra Bpk. Pelda (Purn.) Sumaji &amp; Ibu Idha Tri Setyawati
                                         </h4>
 
                                         <!-- Instagram Icon -->
@@ -589,15 +613,15 @@
                                         font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
                                             Save the <br> Date
                                         </p>
-                                        <p class="mb-0 p-3" style="color: #74673e; font-size:15px; padding-top:20px; font-family:'Alegreya Sans', sans-serif;">
+                                        <p class="mb-0 p-3" style="color: #5a4632 !important; font-size:15px; padding-top:20px; font-family:'Alegreya Sans', sans-serif;">
                                             FOR THE WEDDING OF
                                         </p>
                                         <p class="wow fadeInUp" data-wow-delay="0.6s" style="margin:0; padding:0; font-size:36px; 
                                         font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
                                             Rini &amp; Dhika
                                         </p>
-                                        <p class="mb-0 p-3" style="color: #74673e; font-size:25px; padding-top:0px; font-family:'Alegreya Sans', sans-serif;">
-                                            09.01.26
+                                        <p class="mb-0 p-3" style="color: #5a4632 !important; font-size:25px; padding-top:0px; font-family:'Alegreya Sans', sans-serif;">
+                                            09.01.2026
                                         </p>
                                     </div>
 
@@ -607,7 +631,7 @@
                                     <a id="calendar" class="wow fadeInDown" data-wow-delay="0.5s"
                                         href="https://calendar.app.google/V7vsLmzTGs1YroUQ6"
                                         target="_blank"
-                                        style="position:relative; z-index:3;  font-family:'Alegreya Sans', sans-serif; font-weight: 500;
+                                        style="font-weight: bold; position:relative; z-index:3;  font-family:'Alegreya Sans', sans-serif;
                                                 box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; margin-top: 20px; margin-bottom: 30px; color:#fff;">
                                         <i class="fa fa-calendar-check"></i>&nbsp;&nbsp; ADD TO CALENDAR
                                     </a>
@@ -642,16 +666,18 @@
                             <div class="container py-0">
 
                                 <!-- Wrapper Akad Nikah -->
-                                <div class="akad-wrapper"
-                                    style="background: rgba(255,255,255);
+                                <div class="akad-wrapper wow fadeInLeft" data-wow-delay="0.6s"
+                                    style="background-image:url('/static/img/bg-bunga.svg'); 
+                                        background-position:center; 
+                                        background-repeat:no-repeat; 
+                                        background-size:cover;
                                         padding: 50px 30px; 
-                                        max-width: 80%;   /* Lebar kotak putih */
-                                        margin-left: 0;   /* Mepet kiri */
+                                        max-width: 80%;
+                                        margin-left: 0; 
                                         margin-right: auto; 
                                         position: relative;
                                         box-shadow: 0 10px 25px rgba(0,0,0,0.12);
                                         text-align: left;
-                                        font-family:'Alegreya Sans', sans-serif !important;
                                         margin-bottom: 50px;">
 
                                     <!-- DEKOR KANAN ATAS -->
@@ -690,7 +716,7 @@
                                         <a id="lokasi-btn" 
                                         href="https://maps.app.goo.gl/" 
                                         target="_blank"
-                                        style=" font-family:'Alegreya Sans', sans-serif; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+                                        style="font-weight: bold; font-family:'Alegreya Sans', sans-serif; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
                                         <i class="fa fa-map-marker"></i> &nbsp;&nbsp; LIHAT LOKASI
                                         </a>
                                     </div>
@@ -723,7 +749,7 @@
                                         <a id="lokasi-btn" 
                                         href="https://maps.app.goo.gl/" 
                                         target="_blank"
-                                        style=" font-family:'Alegreya Sans', sans-serif; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+                                        style="font-weight: bold; font-family:'Alegreya Sans', sans-serif; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
                                         <i class="fa fa-map-marker"></i> &nbsp;&nbsp; LIHAT LOKASI
                                         </a>
                                     </div>
@@ -752,14 +778,14 @@
                                 <p class="text-primary mb-0 wow zoomIn p-3" data-wow-delay="0.6s" 
                                     style="font-weight: 0; font-family:'Alegreya Sans', sans-serif !important;
                                     margin-top: 30px; margin-bottom: 30px; font-size: 18px !important; 
-                                    color: #74673e !important;">
+                                    color: #5a4632 !important;">
                                     Merupakan suatu kehormatan dan kebahagiaan apabila Bapak/Ibu/Saudara/i 
                                     berkenan memberikan doa restu kepada kami. 
                                 </p>
                             </div>
 
                             <!-- Form Ucapan Tamu -->
-                            <div class="container" style="border-radius: 0px; background-color: rgba(231,222,207,0.5);
+                            <div class="container" style="border-radius: 0px; background-color: rgba(231,222,207,0.2);
                                 min-height: 95dvh;">
                                 <div class="row justify-content-center">
                                     <div class="col-md-10">
@@ -767,7 +793,7 @@
 
                                             <!-- Form Input -->
                                             <form id="my-form" style="margin-bottom: 10px;" method="POST" 
-                                                action="https://script.google.com/macros/s/AKfycbw8T3B990dFj8OeQNRUAFT8FmDlOrWsAuLRAeQhooUE0YgnKMTfp3nxMsjjUf7mewTJ5w/exec">
+                                                action="https://script.google.com/macros/s/AKfycbx0tJi2sjtW5CzCDHGpjUnFVSR_Uz02Ralnt4pKG6J2CwDCKwkGQ-21ECSCkSafXfM78w/exec">
                                                 <div class="row gx-4 gy-3">
 
                                                     <!-- Input Nama -->
@@ -780,14 +806,13 @@
                                                         </label>
                                                         <input type="text" id="nama" name="nama" placeholder="Masukkan Nama"
                                                                 class="form-control"
-                                                                style="background: rgba(255,255,255,0.9);
+                                                                style="background: #FFFFFF91;
                                                                         border: none;
                                                                         color: #282322 !important; 
                                                                         font-size: 15px;
                                                                         font-family:'Alegreya Sans', sans-serif !important; 
                                                                         padding: 14px 16px;
-                                                                        border-radius: 12px;
-                                                                        box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+                                                                        border-radius: 12px;"
                                                                 required>
                                                         </div>
                                                     </div>
@@ -802,22 +827,23 @@
                                                         </label>
                                                         <textarea id="ucapan" name="ucapan" rows="5" placeholder="Tulis ucapan & do'a..."
                                                                     class="form-control"
-                                                                    style="background: rgba(255,255,255,0.9);
+                                                                    style="background: #FFFFFF91;
                                                                         border: none;
                                                                         color: #282322 !important; 
                                                                         font-size: 15px;
                                                                         font-family:'Alegreya Sans', sans-serif !important; 
                                                                         padding: 14px 16px;
-                                                                        border-radius: 12px;
-                                                                        box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+                                                                        border-radius: 12px;;"
                                                                     required></textarea>
                                                         </div>
                                                     </div>
 
                                                     <!-- Tombol Submit -->
                                                     <div class="col-12 text-center wow fadeInDown" data-wow-delay="0.6s">
-                                                        <button id="send-btn" type="submit" style="font-family:'Alegreya Sans', sans-serif; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
-                                                        <i class="fa fa-comment-dots"></i>&nbsp;&nbsp;KIRIM UCAPAN
+                                                        <button id="send-btn" type="submit" style="font-family:'Alegreya Sans', sans-serif; 
+                                                        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                                                        font-weight: bold; font-size: 14px;">
+                                                        <i class="fa fa-comment-dots"></i>&nbsp;&nbsp; KIRIM UCAPAN
                                                         </button>
                                                     </div>
 
@@ -829,7 +855,7 @@
                                             <iframe class="wow zoomIn" 
                                                 data-wow-delay="0.5s" 
                                                 frameborder="0" 
-                                                src="https://script.google.com/macros/s/AKfycbw8T3B990dFj8OeQNRUAFT8FmDlOrWsAuLRAeQhooUE0YgnKMTfp3nxMsjjUf7mewTJ5w/exec" 
+                                                src="https://script.google.com/macros/s/AKfycbx0tJi2sjtW5CzCDHGpjUnFVSR_Uz02Ralnt4pKG6J2CwDCKwkGQ-21ECSCkSafXfM78w/exec" 
                                                 style="width: 100%; 
                                                     height: 40vh; 
                                                     margin-top: 20px;
@@ -848,125 +874,132 @@
                         </div>
 
                         <!-- Kirim Hadiah -->
-                        <div class="container-fluid position-relative py-0 pt-4" 
-                        style="min-height:100dvh; 
-                                width:100%; 
-                                margin:0; 
-                                padding:0;">
-                            
+                        <div id="gift" class="container-fluid position-relative" 
+                            style="width:100%; margin:0; padding:0; overflow:hidden; transition: all 0.6s ease;">
+
                             <!-- Judul -->
                             <div class="container py-0">
-                                <div id="gift" 
-                                class="mb-0 mt-4 text-center mx-auto wow zoomIn" 
-                                data-wow-delay="0.6s" 
-                                style="max-width: 800px;"
-                                >
-                                <!-- <h3 class="display-5 text-primary" style="color: rgb(40, 51, 34) !important;">Amplop Digital</h3> -->
-                                <h5 class="text-primary mb-0" 
-                                    style="font-weight: bold; margin-bottom: 0px; margin-top: 80px; font-size: 30px !important; 
-                                    font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
-                                    Kirim Hadiah
-                                </h5>
-                                <p style="margin-top: 0px; padding: 20px; text-align: center; 
-                                    font-family:'Alegreya Sans', sans-serif !important; 
-                                    color: rgb(40, 51, 34) !important;">
-                                    Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. 
-                                    Namun jika Anda ingin memberi hadiah, bisa melalui informasi dibawah ini
-                                </p>
+                                <div class="mb-0 mt-4 text-center mx-auto wow zoomIn" 
+                                    data-wow-delay="0.6s" style="max-width: 800px;">
+                                    <h5 class="text-primary mb-0" 
+                                        style="font-weight: bold; margin-bottom: 0px; margin-top: 150px; font-size: 30px !important; 
+                                        font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
+                                        Kirim Hadiah
+                                    </h5>
+                                    <p style="margin-top: 40px; padding: 20px; text-align: center; 
+                                        font-family:'Alegreya Sans', sans-serif !important; 
+                                        color: #5a4632 !important; font-size: 18px;">
+                                        Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. 
+                                        Namun jika Anda ingin memberi hadiah, bisa melalui informasi dibawah ini.
+                                    </p>
                                 </div>
                             </div>
 
                             <div class="col-md-12 text-center" style="margin-top: 30px;">
-                                <!-- Card Rekening -->
-                                <div class="row wow zoomIn" data-wow-delay="0.6s" 
-                                style="margin: 0 auto; width: 300px; height: 159px; border-radius: 30px; text-align: center;"
-                                >
-                                    <div class="card p-0" 
-                                        style="width: 100%; height: auto; 
-                                            background-image: url('/static/img/rek2.png'); 
-                                            background-position: center center; 
-                                            background-repeat: no-repeat; 
-                                            background-size: cover; 
-                                            border-radius: 30px; padding: 7px;">
-                                        <div class="card-body" 
-                                            style="border-radius: 20px; padding-bottom: 10px; 
-                                                    font-family:'Alegreya Sans', sans-serif !important; 
-                                                    box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-                                            <!-- Icon & Judul -->
-                                            <i class="fa fa-university" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
-                                            <h4 style="font-family:'Alegreya Sans', sans-serif !important; text-align: center; color: rgb(40, 51, 34);">
-                                                Rekening
-                                            </h4>
 
-                                            <!-- Info Rekening -->
-                                            <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
+                                <!-- 🔘 Tombol Tampil/Sembunyi -->
+                                <div class="col-12 text-center wow fadeInDown" data-wow-delay="0.6s">
+                                    <button id="toggleGiftBtn" type="button"
+                                        class="btn btn-dark mb-3"
+                                        style="font-family:'Alegreya Sans', sans-serif; 
+                                            border-radius: 30px; 
+                                            font-size: 14px; 
+                                            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+                                        <i class="fa fa-gift"></i>&nbsp;&nbsp; LIHAT HADIAH
+                                    </button>
+                                </div>
+
+                                <!-- 🔲 Wadah berisi dua card (Rekening + Hadiah) -->
+                                <div id="giftContainer" class="fade-box" style="display:none;">
+
+                                    <!-- Card Rekening -->
+                                    <div class="row wow zoomIn" data-wow-delay="0.6s" 
+                                        style="margin: 0 auto 30px auto; width: 300px; border-radius: 30px; text-align: center;">
+                                        <div class="card p-0" 
+                                            style="width: 100%; background-image: url('/static/img/rek2.png'); 
+                                                background-position: center center; background-repeat: no-repeat; 
+                                                background-size: cover; border-radius: 30px; padding: 7px;">
+                                            <div class="card-body" 
+                                                style="border-radius: 20px; padding-bottom: 10px; 
+                                                font-family:'Alegreya Sans', sans-serif !important; 
+                                                box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
+                                                <i class="fa fa-university" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
+                                                <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
+                                                    text-align: center; color: rgb(40, 51, 34);">
+                                                    Rekening
+                                                </h4>
+                                                <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
                                                     font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
                                                     margin-top: 10px;">
-                                                Bank : <strong>Contoh Bank</strong> <br/>
-                                                No. Rekening : <strong>1234567890</strong> <br/>
-                                                Nama : <strong>Contoh Nama</strong> 
-                                            </p>
+                                                    Bank : <strong>Contoh Bank</strong> <br/>
+                                                    No. Rekening : <strong>1234567890</strong> <br/>
+                                                    Nama : <strong>Contoh Nama</strong>
+                                                </p>
 
-                                            <!-- Hidden nomor rekening untuk dicopy -->
-                                            <p id="textToCopy" style="position:absolute; left:-9999px; opacity:0;">
-                                                1234567890
-                                            </p>
+                                                <!-- Hidden nomor rekening -->
+                                                <p id="textToCopy" style="position:absolute; left:-9999px; opacity:0;">1234567890</p>
 
-                                            <!-- Tombol Copy -->
-                                            <div class="text-center mt-2">
-                                                <a id="copyBtn" 
-                                                    class="btn btn-sm btn-dark" 
-                                                    style="border-radius: 10px; font-size: 12px; 
-                                                            font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
-                                                    <i class="fa fa-copy" style="font-size: 14px; color: #ffffff;"></i> Copy
-                                                </a>
+                                                <!-- Tombol Copy -->
+                                                <div class="text-center mt-2">
+                                                    <a id="copyBtn" class="btn btn-sm btn-dark" 
+                                                        style="border-radius: 30px; font-size: 15px; 
+                                                        font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
+                                                        Copy Rekening
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <br/><br/><br/>
-                                
+                                    <!-- Card Kirim Hadiah -->
+                                    <div class="row wow zoomIn" data-wow-delay="0.6s" 
+                                        style="margin: 0 auto; width: 300px; border-radius: 30px; 
+                                            text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
+                                        <div class="card p-0" 
+                                            style="width: 100%; background-image: url('/static/img/rek2.png'); 
+                                                background-position: center center; background-repeat: no-repeat; 
+                                                background-size: cover; border-radius: 30px; padding: 7px;">
+                                            <div class="card-body" 
+                                                style="border-radius: 30px; padding-bottom: 10px; 
+                                                    font-family:'Alegreya Sans', sans-serif !important; 
+                                                    box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
+                                                <i class="fa fa-gift" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
+                                                <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
+                                                    text-align: center; color: rgb(40, 51, 34);">
+                                                    Kirim Hadiah
+                                                </h4>
+                                                <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
+                                                    font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
+                                                    margin-top: 10px;">
+                                                    Nama Penerima : Contoh Nama Penerima <br/>
+                                                    No. telepon : 0813456778 <br/>
+                                                    Alamat : Banyuraden, Kec. Gamping, Kab. Sleman, DIY
+                                                </p>
 
-                                <!-- Card Kirim Hadiah -->
-                                <div class="row wow zoomIn" 
-                                data-wow-delay="0.6s" 
-                                style="margin: 0 auto; margin-top: 20px; width: 300px; height: 159px; border-radius: 30px; 
-                                        text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-                                    <div  class="card p-0" 
-                                        style="width: 100%; height: auto; 
-                                            background-image: url('/static/img/rek2.png'); 
-                                            background-position: center center; 
-                                            background-repeat: no-repeat; 
-                                            background-size: cover; 
-                                            border-radius: 30px; padding: 7px;">
-                                        <div class="card-body" 
-                                        style="border-radius: 30px; padding-bottom: 10px; 
-                                                font-family:'Alegreya Sans', sans-serif !important; 
-                                                box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-                                        <!-- Icon & Judul -->
-                                        <i class="fa fa-gift" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
-                                        <h4 style="font-family:'Alegreya Sans', sans-serif !important; text-align: center; color: rgb(40, 51, 34);">
-                                            Kirim Hadiah
-                                        </h4>
+                                                <!-- Hidden alamat untuk dicopy -->
+                                                <p id="alamatToCopy" style="position:absolute; left:-9999px; opacity:0;">
+                                                    Banyuraden, Kec. Gamping, Kab. Sleman, DIY
+                                                </p>
 
-                                        <!-- Info Penerima -->
-                                        <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
-                                                font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
-                                                margin-top: 10px;">
-                                            Nama Penerima : Contoh Nama Penerima <br/>
-                                            No. telepon : 0813456778 <br/>
-                                            Alamat : Banyuraden, Kec. Gamping, Kab. Sleman, DIY
-                                        </p>
+                                                <!-- Tombol Copy Alamat -->
+                                                <div class="text-center mt-2">
+                                                    <a id="copyAlamatBtn" class="btn btn-sm btn-dark" 
+                                                        style="border-radius: 30px; font-size: 15px; 
+                                                            font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
+                                                        Copy Alamat
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+
+                                </div> 
                             </div>
                         </div>
-
                         
                         <!-- PENUTUP -->
-                        <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center penutup-section">
+                        <div class="container-fluid d-flex flex-column justify-content-center 
+                            align-items-center text-center penutup-section">
 
                             <!-- Ucapan -->
                             <p class="wow fadeInUp" data-wow-delay="0.6s"
@@ -997,7 +1030,7 @@
                         <!-- FOOTER -->
                         <footer class="footer-custom text-center" 
                             style="font-family: 'Alegreya Sans Medium', sans-serif !important;
-                            font-weight: bold;">>
+                            font-weight: bold;">
                             <!-- Ikon sosmed -->
                             <div class="sosmed-icons mb-3">
                                 <a href="#"><i class="fab fa-whatsapp"></i></a> 
@@ -1023,7 +1056,7 @@
     <!-- ===================== NAVBAR BAWAH (awalnya disembunyikan) ===================== -->
     <nav id="bottomNav" class="fixed-bottom navbar mb-2" 
         style="display:none; width: 260px; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
+            background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 50%);
             transition: background 0.3s ease-in-out;">
 
         
@@ -1075,7 +1108,7 @@
             <button id="audio-control" class="audio-btn" 
                 style="background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
                     transition: background 0.3s ease-in-out; 
-                    width: 50px; height: 50px; border-radius: 50%;
+                    width: 50px; height: 50px; border-radius: 50%; top: 620px;
                     display: flex; justify-content: center; align-items: center;">
                 <i id="audio-icon" class="fa fa-play" style="color: #ffffff !important; font-size:20px;"></i>
             </button>
@@ -1083,15 +1116,12 @@
 
     </nav>
 
-   
-
     <!-- ===================== BACK TO TOP BUTTON ===================== -->
     <!-- <a class="btn btn-light-outline-0 btn-md-square back-to-top" href="#" 
     style="background: radial-gradient(circle at center, #b79f31 0%, #8a6920 70%);
             transition: background 0.3s ease-in-out; border-radius: 50%;">
         <i class="fa fa-arrow-up" style="color: white;"></i>
     </a> -->
-
 
 
 </div>
@@ -1162,6 +1192,51 @@
         }
     </script> -->
 
+    
+    <!-- COPY TO CLIPBOARD (REKENING / HADIAH) -->
+    <script>
+        const toggleBtn = document.getElementById("toggleGiftBtn");
+        const container = document.getElementById("giftContainer");
+        const giftSection = document.getElementById("gift");
+
+        toggleBtn.addEventListener("click", function() {
+            const icon = this.querySelector("i"); // ambil elemen <i> di dalam tombol
+
+            if (container.classList.contains("show")) {
+                // hide
+                container.classList.remove("show");
+                giftSection.classList.remove("expanded");
+                setTimeout(() => container.style.display = "none", 500);
+
+                // ubah teks dan ikon
+                icon.className = "fa fa-gift";
+                this.innerHTML = '<i class="fa fa-gift"></i>&nbsp;&nbsp;LIHAT HADIAH';
+            } else {
+                // show
+                container.style.display = "block";
+                setTimeout(() => container.classList.add("show"), 10);
+                giftSection.classList.add("expanded");
+
+                // ubah teks dan ikon
+                icon.className = "fa fa-times"; // atau pakai "fa fa-chevron-up" jika mau panah
+                this.innerHTML = '<i class="fa fa-times"></i>&nbsp;&nbsp;TUTUP HADIAH';
+            }
+        });
+
+        // Tombol copy nomor rekening
+        document.getElementById("copyBtn").addEventListener("click", function() {
+            const text = document.getElementById("textToCopy").innerText;
+            navigator.clipboard.writeText(text);
+            alert("Nomor rekening berhasil disalin!");
+        });
+
+        // Tombol copy alamat
+        document.getElementById("copyAlamatBtn").addEventListener("click", function() {
+            const alamat = document.getElementById("alamatToCopy").innerText;
+            navigator.clipboard.writeText(alamat);
+            alert("Alamat berhasil disalin!");
+        });
+    </script>
 
     <!-- ===================== COUNTDOWN ACARA ===================== -->
     <script>
@@ -1318,6 +1393,9 @@
             // tampilkan tombol audio & navbar
             document.getElementById("audio-container").style.display = "block";
             document.getElementById("bottomNav").style.display = "flex";
+
+            // sembunyikan tombol "BUKA UNDANGAN" setelah diklik
+            document.getElementById("buka").style.display = "none";
         }
 
         // Disable scroll saat load awal
@@ -1342,44 +1420,6 @@
         });
     </script>
 
-
-
-    <!-- ===================== COPY TO CLIPBOARD (REKENING / HADIAH) ===================== -->
-    <script>
-    // Tombol copy untuk rekening pertama
-    const copyBtn = document.getElementById('copyBtn');
-    const textToCopy = document.getElementById('textToCopy');
-
-    copyBtn.addEventListener('click', () => {
-        navigator.clipboard.writeText(textToCopy.innerText)
-            .then(() => Swal.fire("Berhasil Tersalin!"))
-            .catch(() => Swal.fire("Gagal Tersalin!"));
-    });
-    </script>
-
-    <script>
-    // Tombol copy untuk rekening kedua
-    const copyBtn2 = document.getElementById('copyBtn2');
-    const textToCopy2 = document.getElementById('textToCopy2');
-
-    copyBtn2.addEventListener('click', () => {
-        navigator.clipboard.writeText(textToCopy2.innerText)
-            .then(() => Swal.fire("Berhasil Tersalin!"))
-            .catch(() => Swal.fire("Gagal Tersalin!"));
-    });
-    </script>
-
-    <script>
-    // Tombol copy untuk rekening ketiga
-    const copyBtn3 = document.getElementById('copyBtn3');
-    const textToCopy3 = document.getElementById('textToCopy3');
-
-    copyBtn3.addEventListener('click', () => {
-        navigator.clipboard.writeText(textToCopy3.innerText)
-            .then(() => Swal.fire("Berhasil Tersalin!"))
-            .catch(() => Swal.fire("Gagal Tersalin!"));
-    });
-    </script>
 
     <!-- ===================== LIGHTBOX GALLERY ===================== -->
     <script>
