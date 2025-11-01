@@ -3,12 +3,19 @@
     <head>
         <!-- Meta Tag Dasar -->
         <meta charset="utf-8"/>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <meta content="" name="keywords"/>
-        <meta content="" name="description"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Mari berbagi kebahagiaan di hari istimewa kami.">
+        <meta name="keywords" content="Wedding, Irmma, Adji, Invitation, Undangan Pernikahan">
         <!-- Open Graph untuk SEO -->
-        <meta content="Wedding Of Rini &amp; Dhika" property="og:title">
-        <!-- <meta property="og:image" content="{{ url_for('static', filename='img/icon-cerita.png') }}"/> -->
+        <meta content="Wedding Of Irmma &amp; Adji" property="og:title">
+        <meta property="og:image" content="{{ url_for('static', filename='img/home-icon.png') }}"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Wedding of Irmma & Adji" />
+        <meta property="og:title" content="Wedding of Irmma & Adji" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/home-icon.png') }}" />
+
         <!-- Google Fonts -->
         <link href="https://fonts.cdnfonts.com/css/anaktoria" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/alegreya-sans-medium" rel="stylesheet">
@@ -16,9 +23,8 @@
         <link href="https://fonts.cdnfonts.com/css/tempting" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/cormorant-garamond" rel="stylesheet">
                 
-    
         <!-- Icon Fonts -->
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <!-- <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet"> -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
         <!-- Library CSS -->
@@ -42,7 +48,6 @@
         <link href="{{ url_for('static', filename='img/icon-url.png') }}" rel="shortcut icon"/>
         </link>
         </link>
-
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -119,9 +124,9 @@
             /* AUDIO */
             .audio-btn {
                 position: fixed;
-                bottom: 20px;
+                bottom: 70px;
                 right: 20px;
-                background: #af7b0c;
+                background: radial-gradient(circle at center, #8a6920 0%, #8a6920 70%);
                 color: #fff;
                 border: none;
                 border-radius: 50%;
@@ -337,6 +342,7 @@
             }
 
         </style>
+
         </meta>
     </head>
 
@@ -346,7 +352,7 @@
         </div>
 
         <!-- Kolom tengah HOME -->
-        <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+        <div class="col-lg-5 col-md-10 col-xl-4 mx-auto">
             <body data-bs-spy="scroll" data-bs-target="#navBar" id="weddingHome" style="background-color: #ffffff;">
 
                 <!-- BAGIAN SPINNER LOADING -->
@@ -392,7 +398,7 @@
                             <p class="wow fadeInUp" data-wow-delay="0.6s" 
                                 style="margin-top: 30px; padding:0; font-size: 35px; font-family: 'Tempting', sans-serif;
                                         color: #8a6920 !important; text-shadow:var(--shadow);">
-                                Rini <br> &amp; <br> Dhika
+                                Irmma <br> &amp; <br> Adji
                             </p><br>
                             <h4 style="position: relative; z-index: 10; 
                                     margin-top: 40px;margin-bottom: 30px; padding:0; font-size:17px;
@@ -599,7 +605,7 @@
                                     <!-- Bingkai bunga di atas box -->
                                     <img src="{{ url_for('static', filename='img/dekor-date.svg') }}" 
                                         alt="bingkai bunga"
-                                        style="width:390px; height:auto; position:absolute; top:-90px; left:50%; transform:translateX(-50%);"/>
+                                        style="width:100%; height:auto; position:absolute; top:-90px; left:50%; transform:translateX(-50%);"/>
 
                                     <!-- GIF overlay di atas judul -->
                                     <img src="{{ url_for('static', filename='img/burung.gif') }}" 
@@ -618,7 +624,7 @@
                                         </p>
                                         <p class="wow fadeInUp" data-wow-delay="0.6s" style="margin:0; padding:0; font-size:36px; 
                                         font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
-                                            Rini &amp; Dhika
+                                            Irmma &amp; Adji
                                         </p>
                                         <p class="mb-0 p-3" style="color: #5a4632 !important; font-size:25px; padding-top:0px; font-family:'Alegreya Sans', sans-serif;">
                                             09.01.2026
@@ -764,7 +770,7 @@
                             <!-- Bingkai bunga -->
                             <img src="{{ url_for('static', filename='img/dekor-date.svg') }}" 
                                 alt="bingkai bunga" id="rsvpwedding" 
-                                style="width:390px; height:auto; position:absolute; 
+                                style="width:100%; height:auto; position:absolute; 
                                     top:-210px; left:50%; transform:translateX(-50%); z-index:1;"/>
 
                             <!-- Judul -->
@@ -863,7 +869,7 @@
                                             </iframe>
 
                                             <img src="{{ url_for('static', filename='img/dekor-ucapan.svg') }}" 
-                                                style="width: 400px; height: auto; border-radius: 13px;
+                                                style="width: 450px; height: auto; border-radius: 13px;
                                                     position: absolute; bottom: -120px; left: 50%; transform: translateX(-50%);
                                                     z-index: 2;" 
                                                 alt="">
@@ -1014,13 +1020,13 @@
                             <h1 class="wow fadeInDown" data-wow-delay="0.8s"
                                 style="font-family: 'Tempting', cursive; font-weight: normal; 
                                     margin-top: 40px; color: #8a6920; font-size: 38px;">
-                                Rini &amp; Dhika
+                                Irmma &amp; Adji
                             </h1>
 
                             <!-- Dekorasi bawah -->
                             <img src="{{ url_for('static', filename='img/dekor-penutup.svg') }}" 
                                 class="penutup-dekor"
-                                style="width: 400px; height: auto; margin-top: 0px;" 
+                                style="width: 480px; height: auto; margin-top: 0px;" 
                                 alt="">
                         </div>
 
@@ -1096,25 +1102,21 @@
             <i class="fa fa-gift" style="color: #ffffff !important; font-size:22px;"></i>
         </a>
 
-        <!-- ===================== AUDIO PLAYER ===================== -->
-        <div id="audio-container" 
-            style="position: fixed; bottom: 80px; right: 20px; z-index: 1050; display: none;">
-            
-            <audio id="song" loop muted>
-                <source src="{{ url_for('static', filename='song/song2.mp3') }}" type="audio/mpeg"/>
-            </audio>
-
-            <!-- Tombol Play/Pause -->
-            <button id="audio-control" class="audio-btn" 
-                style="background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
-                    transition: background 0.3s ease-in-out; 
-                    width: 50px; height: 50px; border-radius: 50%; top: 620px;
-                    display: flex; justify-content: center; align-items: center;">
-                <i id="audio-icon" class="fa fa-play" style="color: #ffffff !important; font-size:20px;"></i>
-            </button>
-        </div>
+        
 
     </nav>
+
+    <!-- ===================== AUDIO PLAYER ===================== -->
+    <div id="audio-container" style="display: none;">
+        <audio id="song" loop muted>
+            <source src="{{ url_for('static', filename='song/song2.mp3') }}" type="audio/mpeg"/>
+        </audio>
+
+        <!-- Tombol Play/Pause -->
+        <button id="audio-control" class="audio-btn" style="border: none;">
+            <i id="audio-icon" class="fa fa-play" style=""></i>
+        </button>
+    </div>
 
     <!-- ===================== BACK TO TOP BUTTON ===================== -->
     <!-- <a class="btn btn-light-outline-0 btn-md-square back-to-top" href="#" 
@@ -1363,6 +1365,7 @@
         }
     </script>
 
+    <!-- ===================== SCROLL, AUDIO ===================== -->
     <script>
         // ===================== DISABLE SCROLL =====================
         function disableScroll() {
