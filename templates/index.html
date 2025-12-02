@@ -1195,50 +1195,8 @@
         document.getElementById("bottomNav").style.display = "flex";
     }
     </script>
-
-    <!-- ===================== AUDIO ACARA ===================== -->
-    <!-- <script>
-        const song = document.getElementById("song");
-        const audioBtn = document.getElementById("audio-control");
-        const audioIcon = document.getElementById("audio-icon");
-        const bukaBtn = document.getElementById("buka"); // tombol "Buka Undangan"
-
-        // Fungsi aktifkan audio
-        function enableAudio() {
-            if (song.paused) {
-                song.play();
-                audioIcon.classList.remove("fa-play");
-                audioIcon.classList.add("fa-pause");
-            }
-            // Jalankan sekali saja
-            window.removeEventListener("scroll", enableAudio);
-            if (bukaBtn) bukaBtn.removeEventListener("click", enableAudio);
-        }
-
-        // Tombol play/pause manual
-        audioBtn.addEventListener("click", () => {
-            if (song.paused) {
-                song.play();
-                audioIcon.classList.remove("fa-play");
-                audioIcon.classList.add("fa-pause");
-            } else {
-                song.pause();
-                audioIcon.classList.remove("fa-pause");
-                audioIcon.classList.add("fa-play");
-            }
-        });
-
-        // Aktifkan audio saat scroll pertama kali
-        window.addEventListener("scroll", enableAudio);
-
-        // Atau saat klik tombol "Buka Undangan"
-        if (bukaBtn) {
-            bukaBtn.addEventListener("click", enableAudio);
-        }
-    </script> -->
-
     
-    <!-- COPY TO CLIPBOARD (REKENING / HADIAH) -->
+    <!-- ===================== COPY TO CLIPBOARD (REKENING / HADIAH) ===================== -->
     <script>
         const toggleBtn = document.getElementById("toggleGiftBtn");
         const container = document.getElementById("giftContainer");
@@ -1268,26 +1226,44 @@
             }
         });
 
-        // Tombol copy nomor rekening
-        document.getElementById("copyBtn").addEventListener("click", function() {
+        // Tombol copy nomor rekening Mandiri
+        document.getElementById("copyBtn").onclick = function () {
             const text = document.getElementById("textToCopy").innerText;
-            navigator.clipboard.writeText(text);
-            alert("Nomor rekening berhasil disalin!");
-        });
+            navigator.clipboard.writeText(text).then(() => {
+                Swal.fire({
+                    icon: "success",
+                    title: "Tersalin!",
+                    text: "Nomor rekening Mandiri berhasil disalin.",
+                    confirmButtonColor: "#8a6920"
+                });
+            });
+        };
 
-        // Tombol copy nomor rekening
-        document.getElementById("copyBtn2").addEventListener("click", function() {
+        // Tombol copy nomor rekening BCA
+        document.getElementById("copyBtn2").onclick = function () {
             const text = document.getElementById("textToCopy2").innerText;
-            navigator.clipboard.writeText(text);
-            alert("Nomor rekening berhasil disalin!");
-        });
+            navigator.clipboard.writeText(text).then(() => {
+                Swal.fire({
+                    icon: "success",
+                    title: "Tersalin!",
+                    text: "Nomor rekening BCA berhasil disalin.",
+                    confirmButtonColor: "#8a6920"
+                });
+            });
+        };
 
-        // Tombol copy alamat
-        document.getElementById("copyAlamatBtn").addEventListener("click", function() {
-            const alamat = document.getElementById("alamatToCopy").innerText;
-            navigator.clipboard.writeText(alamat);
-            alert("Alamat berhasil disalin!");
-        });
+        // Tombol copy alamat hadiah
+        document.getElementById("copyAlamatBtn").onclick = function () {
+            const text = document.getElementById("alamatToCopy").innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                Swal.fire({
+                    icon: "success",
+                    title: "Tersalin!",
+                    text: "Alamat pengiriman hadiah berhasil disalin.",
+                    confirmButtonColor: "#8a6920"
+                });
+            });
+        };
     </script>
 
     <!-- ===================== COUNTDOWN ACARA ===================== -->
@@ -1383,18 +1359,6 @@
 
 
     <!-- ===================== PARAMETER NAMA UNDANGAN ===================== -->
-    <!-- <script>
-    // Ambil nama tamu dari URL (?to=Nama) dan tampilkan di header + isikan otomatis ke form RSVP
-    const urlParams = new URLSearchParams(window.location.search);
-    const nama = urlParams.get('to', 'nama');
-    console.log(nama);
-
-    const namaContainer = document.querySelector('.headernya h4 span');
-    namaContainer.innerText = nama;
-
-    document.querySelector('#nama').value = nama;
-    </script> -->
-
     <script>
         // Ambil nama tamu dari URL (?to=Nama)
         const urlParams = new URLSearchParams(window.location.search);
@@ -1473,7 +1437,6 @@
         });
     </script>
 
-
     <!-- ===================== LIGHTBOX GALLERY ===================== -->
     <script>
     // Animasi hover untuk gallery image
@@ -1541,7 +1504,7 @@
     });
     </script>
 
-   <script>
+    <script>
     document.addEventListener("DOMContentLoaded", () => {
         const items = document.querySelectorAll(".gallery-grid a");
 
@@ -1571,29 +1534,29 @@
 
         items.forEach(item => observer.observe(item));
     });
-</script>
+    </script>
 
-<!-- SPINNER -->
-<script>
-    window.addEventListener('load', function() {
-        const spinner = document.getElementById('spinner');
-        if (spinner) {
-            spinner.classList.remove('show');
-            spinner.style.display = 'none';
-        }
-    });
-</script>
+    <!-- ===================== SPINNER ===================== -->
+    <script>
+        window.addEventListener('load', function() {
+            const spinner = document.getElementById('spinner');
+            if (spinner) {
+                spinner.classList.remove('show');
+                spinner.style.display = 'none';
+            }
+        });
+    </script>
 
-<!-- VIDEO BG -->
- <script>
-    const video = document.getElementById('bg-video');
+    <!-- ===================== VIDEO BG ===================== -->
+    <script>
+        const video = document.getElementById('bg-video');
 
-    video.addEventListener('ended', function() {
-        // Hapus atribut 'loop' agar video tidak berulang
-        this.removeAttribute('loop');
-        // Pastikan video berhenti di frame terakhir
-        this.pause(); 
-    });
-</script>
+        video.addEventListener('ended', function() {
+            // Hapus atribut 'loop' agar video tidak berulang
+            this.removeAttribute('loop');
+            // Pastikan video berhenti di frame terakhir
+            this.pause(); 
+        });
+    </script>
 
 </html>
