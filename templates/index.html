@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Meta Tag Dasar -->
+        <!-- Meta Dasar -->
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Mari berbagi kebahagiaan di hari istimewa kami.">
         <meta name="keywords" content="Wedding, Irmma, Adji, Invitation, Undangan Pernikahan">
-        <!-- Open Graph untuk SEO -->
-        <meta content="Wedding Of Irmma &amp; Adji" property="og:title">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Wedding of Irmma & Adji" />
+        <meta property="og:description" content="Mari berbagi kebahagiaan di hari istimewa kami." />
         <meta property="og:image" content="{{ url_for('static', filename='img/home-icon.png') }}"/>
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Wedding of Irmma & Adji" />
-        <meta property="og:title" content="Wedding of Irmma & Adji" />
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ url_for('static', filename='img/home-icon.png') }}" />
+        <!-- Favicon (pilih satu saja) -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon-url.png') }}" />
 
         <!-- Google Fonts -->
         <link href="https://fonts.cdnfonts.com/css/anaktoria" rel="stylesheet">
@@ -22,32 +23,27 @@
         <link href="https://fonts.cdnfonts.com/css/gilda-display" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/tempting" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/cormorant-garamond" rel="stylesheet">
-                
-        <!-- Icon Fonts -->
+
+        <!-- Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <!-- <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet"> -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+
         <!-- Library CSS -->
-        <link href="{{ url_for ('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet"/>
-        <link href="{{ url_for ('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet"/>
-        <!-- Bootstrap Kustom -->
-        <link href="{{ url_for ('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"/>
+        <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet"/>
+        <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet"/>
+
+        <!-- Bootstrap Custom -->
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"/>
+
         <!-- CSS Utama -->
-        <link href="{{ url_for ('static', filename='css/style.css') }}" rel="stylesheet"/>
-        <!-- SweetAlert (alert pop-up) -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js">
-        </script>
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"/>
+
+        <!-- SweetAlert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css" rel="stylesheet"/>
-        <!-- Countdown Timer -->
-        <!-- <link href="{{ url_for ('static', filename='countdown/css/simplyCountdown.theme.default.css') }}" rel="stylesheet">
-        <script src="{{ url_for ('static', filename='countdown/dist/simplyCountdown.min.js') }}"> -->
-        </script>
-        <script src="{{ url_for ('static', filename='js/simplyCountdown.js') }}">
-        </script>
-        <!-- Favicon -->
-        <link href="{{ url_for('static', filename='img/icon-url.png') }}" rel="shortcut icon"/>
-        </link>
-        </link>
+
+        <!-- Countdown -->
+        <script src="{{ url_for('static', filename='js/simplyCountdown.js') }}"></script>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -506,11 +502,11 @@
                                 
                                     <!-- Mempelai Wanita -->
                                     <div class="mx-auto text-center mb-0 wow fadeInRight" data-wow-delay="0.5s" style="max-width:800px; position:relative; z-index:2;">
-                                        <img src="{{ url_for('static', filename='img/wanita.svg') }}" alt="Mempelai Wanita"
+                                        <!-- <img src="{{ url_for('static', filename='img/wanita.svg') }}" alt="Mempelai Wanita"
                                             class="img-responsive foto-wanita wow fadeInUp" data-wow-delay="0.6s"
-                                            style="width:230px; padding-top: 40px; height:auto; display:block; margin:0 auto;"/>
+                                            style="width:230px; padding-top: 40px; height:auto; display:block; margin:0 auto;"/> -->
 
-                                        <h5 class="text-primary mb-0" style="margin-top: 20px; font-weight:bold; font-size:20px; 
+                                        <h5 class="text-primary mb-0" style="margin-top: 80px; font-weight:bold; font-size:20px; 
                                             font-family:'Tempting', sans-serif; color:#8a6920 !important;
                                             line-height: 2.0; word-break: break-word;">
                                         Irmma Dwijayanti, S.Kom., M.Eng.
@@ -528,7 +524,7 @@
                                                     height: 45px; 
                                                     margin-top: 12px; 
                                                     box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-                                            <a href="https://instagram.com/" target="_blank" 
+                                            <a href="https://www.instagram.com/irmmadwi/" target="_blank" 
                                             style="color: #ffffff; font-size: 20px; line-height: 1;box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
                                                 <i class="fab fa-instagram"></i>
                                             </a>
@@ -539,9 +535,7 @@
                                     <h1 class="mx-auto text-center text-primary mb-0 wow fadeInUp" style="font-weight:bold; font-size:40px; font-family:'Tempting', sans-serif; color:#8a6920 !important; margin-top:40px;">&amp;</h1>
 
                                     <div class="mx-auto text-center mb-0 wow fadeInRight" data-wow-delay="0.5s" style="max-width:800px; padding-bottom: 40px; position:relative; z-index:2;">
-                                        <img src="{{ url_for('static', filename='img/pria.svg') }}" alt="Mempelai Pria"
-                                            class="img-responsive foto-pria wow fadeInUp" data-wow-delay="0.6s"
-                                            style="width:230px; padding-top: 40px; height:auto; display:block; margin:0 auto;"/>
+                                        <!-- <img srse="width:230px; padding-top: 40px; height:auto; display:block; margin:0 auto;"/> -->
 
                                         <h5 class="text-primary mb-0" style="margin-top: 20px; font-weight:bold; font-size:20px; 
                                             font-family:'Tempting', sans-serif; color:#8a6920 !important;
@@ -561,7 +555,7 @@
                                                     height: 45px; 
                                                     margin-top: 12px; 
                                                     box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-                                            <a href="https://instagram.com/" target="_blank" 
+                                            <a href="https://www.instagram.com/adjipras17/" target="_blank" 
                                             style="color: #ffffff; font-size: 20px; line-height: 1; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
                                                 <i class="fab fa-instagram"></i>
                                             </a>
@@ -627,7 +621,7 @@
                                             Irmma &amp; Adji
                                         </p>
                                         <p class="mb-0 p-3" style="color: #5a4632 !important; font-size:25px; padding-top:0px; font-family:'Alegreya Sans', sans-serif;">
-                                            09.01.2026
+                                            Tgl/Bulan/Tahun
                                         </p>
                                     </div>
 
@@ -704,26 +698,26 @@
                                     </h3>
 
                                     <p style="font-size:16px; color:#444; margin:0;font-family:'Alegreya Sans', sans-serif !important;">
-                                        Sabtu, 10 Oktober 2024
+                                        Jum'at, 9 Januari 2026
                                     </p>
                                     <p style="font-size:16px; color:#444; margin:0;font-family:'Alegreya Sans', sans-serif !important;">
-                                        12.00 WIB
+                                        Pukul 09.00 - 11.00 WIB
                                     </p>
 
                                     <p style="font-size:16px; margin-top:15px; color:#5b4636; font-weight:600;font-family:'Alegreya Sans', sans-serif !important;">
                                         KEDIAMAN MEMPELAI WANITA
                                     </p>
                                     <p style="font-size:15px; color:#666; margin:0;font-family:'Alegreya Sans', sans-serif !important;">
-                                        Jalan kemerdekaan no 1945
+                                        Dk. Rawansari RT. 03 RW. 01, Ds. Guyangan, Kec. Bangsri, Kab. Jepara, Jawa Tengah
                                     </p>
                                     <!-- Tombol -->
                                     <!-- Tombol Lihat Lokasi -->
                                     <div style="text-align:center; margin-top:25px;">
                                         <a id="lokasi-btn" 
-                                        href="https://maps.app.goo.gl/" 
+                                        href="https://www.google.com/maps/search/?api=1&query=-6.539587,110.746784"
                                         target="_blank"
                                         style="font-weight: bold; font-family:'Alegreya Sans', sans-serif; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
-                                        <i class="fa fa-map-marker"></i> &nbsp;&nbsp; LIHAT LOKASI
+                                            <i class="fa fa-map-marker"></i> &nbsp;&nbsp; LIHAT LOKASI
                                         </a>
                                     </div>
 
@@ -737,26 +731,26 @@
                                     </h3>
 
                                     <p style="font-size:16px; color:#444; margin:0; font-family:'Alegreya Sans', sans-serif !important;">
-                                        Sabtu, 10 Oktober 2024
+                                        Jum'at, 9 Januari 2026
                                     </p>
                                     <p style="font-size:16px; color:#444; margin:0;font-family:'Alegreya Sans', sans-serif !important;">
-                                        12.00 WIB
+                                        Pukul 12.00-14.00 WIB
                                     </p>
 
                                     <p style="font-size:16px; margin-top:15px; color:#5b4636; font-weight:600;font-family:'Alegreya Sans', sans-serif !important;">
                                         KEDIAMAN MEMPELAI WANITA
                                     </p>
                                     <p style="font-size:15px; color:#666; margin:0;font-family:'Alegreya Sans', sans-serif !important;">
-                                        Jalan kemerdekaan no 1945
+                                        Dk. Rawansari RT. 03 RW. 01, Ds. Guyangan, Kec. Bangsri, Kab. Jepara, Jawa Tengah
                                     </p>
                                     <!-- Tombol -->
                                     <!-- Tombol Lihat Lokasi -->
                                     <div style="text-align:center; margin-top:25px;">
                                         <a id="lokasi-btn" 
-                                        href="https://maps.app.goo.gl/" 
+                                        href="https://www.google.com/maps/search/?api=1&query=-6.539587,110.746784"
                                         target="_blank"
                                         style="font-weight: bold; font-family:'Alegreya Sans', sans-serif; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
-                                        <i class="fa fa-map-marker"></i> &nbsp;&nbsp; LIHAT LOKASI
+                                            <i class="fa fa-map-marker"></i> &nbsp;&nbsp; LIHAT LOKASI
                                         </a>
                                     </div>
                                 </div>
@@ -911,7 +905,7 @@
                                             border-radius: 30px; 
                                             font-size: 14px; 
                                             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
-                                        <i class="fa fa-gift"></i>&nbsp;&nbsp; LIHAT HADIAH
+                                        <i class="fa fa-gift"></i>&nbsp;&nbsp; KIRIM HADIAH
                                     </button>
                                 </div>
 
@@ -937,17 +931,56 @@
                                                 <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
                                                     font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
                                                     margin-top: 10px;">
-                                                    Bank : <strong>Contoh Bank</strong> <br/>
-                                                    No. Rekening : <strong>1234567890</strong> <br/>
-                                                    Nama : <strong>Contoh Nama</strong>
+                                                    Bank: <strong>Mandiri</strong> <br/>
+                                                    No. Rekening: <strong>1370020876187</strong> <br/>
+                                                    Nama: <strong>Moch Adji Prasetyo</strong>
                                                 </p>
 
                                                 <!-- Hidden nomor rekening -->
-                                                <p id="textToCopy" style="position:absolute; left:-9999px; opacity:0;">1234567890</p>
+                                                <p id="textToCopy" style="position:absolute; left:-9999px; opacity:0;">1370020876187</p>
 
                                                 <!-- Tombol Copy -->
                                                 <div class="text-center mt-2">
-                                                    <a id="copyBtn" class="btn btn-sm btn-dark" 
+                                                    <a id="copyBtn" class="btn btn-sm" 
+                                                        style="border-radius: 30px; font-size: 15px; 
+                                                        font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
+                                                        Copy Rekening
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card Rekening -->
+                                    <div class="row wow zoomIn" data-wow-delay="0.6s" 
+                                        style="margin: 0 auto 30px auto; width: 300px; border-radius: 30px; text-align: center;">
+                                        <div class="card p-0" 
+                                            style="width: 100%; background-image: url('/static/img/rek2.png'); 
+                                                background-position: center center; background-repeat: no-repeat; 
+                                                background-size: cover; border-radius: 30px; padding: 7px;">
+                                            <div class="card-body" 
+                                                style="border-radius: 20px; padding-bottom: 10px; 
+                                                font-family:'Alegreya Sans', sans-serif !important; 
+                                                box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
+                                                <i class="fa fa-university" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
+                                                <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
+                                                    text-align: center; color: rgb(40, 51, 34);">
+                                                    Rekening
+                                                </h4>
+                                                <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
+                                                    font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
+                                                    margin-top: 10px;">
+                                                    Bank: <strong>BCA</strong> <br/>
+                                                    No. Rekening: <strong>1690289942</strong> <br/>
+                                                    Nama: <strong>Irmma Dwijayanti</strong>
+                                                </p>
+
+                                                <!-- Hidden nomor rekening -->
+                                                <p id="textToCopy2" style="position:absolute; left:-9999px; opacity:0;">1690289942</p>
+
+                                                <!-- Tombol Copy -->
+                                                <div class="text-center mt-2">
+                                                    <a id="copyBtn2" class="btn btn-sm" 
                                                         style="border-radius: 30px; font-size: 15px; 
                                                         font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
                                                         Copy Rekening
@@ -977,14 +1010,16 @@
                                                 <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
                                                     font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
                                                     margin-top: 10px;">
-                                                    Nama Penerima : Contoh Nama Penerima <br/>
-                                                    No. telepon : 0813456778 <br/>
-                                                    Alamat : Banyuraden, Kec. Gamping, Kab. Sleman, DIY
+                                                    Nama Penerima: Irmma Dwijayanti <br/>
+                                                    No. telepon: 0813456778 <br/>
+                                                    Alamat: Gang Padepokan No. 1, Jatipereng, Balecatur (Rumah paling timur No.1)
+                                                    Gamping, Sleman, DI Yogyakarta, 55281
                                                 </p>
 
                                                 <!-- Hidden alamat untuk dicopy -->
                                                 <p id="alamatToCopy" style="position:absolute; left:-9999px; opacity:0;">
-                                                    Banyuraden, Kec. Gamping, Kab. Sleman, DIY
+                                                    Gang Padepokan No. 1, Jatipereng, Balecatur (Rumah paling timur No.1)
+                                                    Gamping, Sleman, DI Yogyakarta, 55281
                                                 </p>
 
                                                 <!-- Tombol Copy Alamat -->
@@ -993,6 +1028,14 @@
                                                         style="border-radius: 30px; font-size: 15px; 
                                                             font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
                                                         Copy Alamat
+                                                    </a>
+                                                </div>
+                                                <div style="text-align:center; margin-top:25px;">
+                                                    <a id="lokasi-btn-hadiah"
+                                                    href="https://www.google.com/maps/search/?api=1&query=-7.810570108347733, 110.28674860873527"
+                                                    target="_blank"
+                                                    style="font-weight: bold; font-family:'Alegreya Sans', sans-serif;">
+                                                       Lihat Alamat
                                                     </a>
                                                 </div>
                                             </div>
@@ -1228,6 +1271,13 @@
         // Tombol copy nomor rekening
         document.getElementById("copyBtn").addEventListener("click", function() {
             const text = document.getElementById("textToCopy").innerText;
+            navigator.clipboard.writeText(text);
+            alert("Nomor rekening berhasil disalin!");
+        });
+
+        // Tombol copy nomor rekening
+        document.getElementById("copyBtn2").addEventListener("click", function() {
+            const text = document.getElementById("textToCopy2").innerText;
             navigator.clipboard.writeText(text);
             alert("Nomor rekening berhasil disalin!");
         });
