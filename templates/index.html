@@ -286,36 +286,34 @@
             }
 
 
-            .footer-custom {
-            /* background-color: #e9e0d1; */
-            padding: 0px 15px 50px 15px;
-            color: #5a4632;
-            font-weight: bold;
-            }
-
-            .footer-custom .sosmed-icons a {
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 22px;
-            color: #5a4632;
-            transition: color 0.3s;
-            }
-
-            .footer-custom .sosmed-icons a:hover {
-            color: #8a6920;
+           .footer-custom {
+                background-color: #8a6a2e;
+                padding: 20px 15px 60px 15px; /* ditambah jarak bawah */
+                color: white;
+                text-align: center;
+                font-family: 'Alegreya Sans', sans-serif;
             }
 
             .footer-custom p {
-            margin: 0;
-            font-size: 13px;
-            font-family: 'Alegreya Sans', sans-serif;
-            color: #5a4632;
+                margin: 0 0 10px 0;
+                font-size: 13px;
             }
 
-            .footer-custom p a {
-            color: #8a6920;
-            text-decoration: none;
-            font-weight: bold;
+            .footer-custom p .heart {
+                color: #ff6a89;
+            }
+
+            /* Ikon sosmed — DIPERKECIL */
+            .footer-custom .sosmed-icons a {
+                display: inline-block;
+                margin: 0 10px;
+                font-size: 22px;      /* sebelumnya 35 → sekarang kecil */
+                color: white;
+                transition: 0.3s;
+            }
+
+            .footer-custom .sosmed-icons a:hover {
+                opacity: 0.6;
             }
 
             /* HIDE & SHOW */
@@ -335,6 +333,26 @@
             }
             #gift.expanded {
                 height: auto; /* otomatis sesuai isi */
+            }
+            /* Wrapper untuk posisi tengah */
+            .gift-box-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 60px 20px 40px 20px;
+            }
+
+            /* BOX putih transparan lembut */
+            .gift-box {
+                background: rgba(255, 255, 255, 0.7); /* efek transparan */
+                border: 1.5px solid rgba(255, 255, 255, 0.7);
+                border-radius: 22px;
+                padding: 20px 10px 40px 10px;
+                max-width: 420px;
+                width: 100%;
+                backdrop-filter: blur(4px); /* efek kaca */
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+                margin-top: 60px;
             }
 
         </style>
@@ -506,7 +524,7 @@
                                             class="img-responsive foto-wanita wow fadeInUp" data-wow-delay="0.6s"
                                             style="width:230px; padding-top: 40px; height:auto; display:block; margin:0 auto;"/> -->
 
-                                        <h5 class="text-primary mb-0" style="margin-top: 80px; font-weight:bold; font-size:20px; 
+                                        <h5 class="text-primary mb-0" style="margin-top: 80px; font-weight:bold; font-size:26px; 
                                             font-family:'Tempting', sans-serif; color:#8a6920 !important;
                                             line-height: 2.0; word-break: break-word;">
                                         Irmma Dwijayanti
@@ -520,8 +538,8 @@
                                                     background: radial-gradient(circle at center, #8a6920 0%, #8a6920 70%);
                                                     color: #fff; 
                                                     border-radius: 50%; 
-                                                    width: 45px; 
-                                                    height: 45px; 
+                                                    width: 35px; 
+                                                    height: 35px; 
                                                     margin-top: 12px; 
                                                     box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
                                             <a href="https://www.instagram.com/irmmadwi/" target="_blank" 
@@ -537,7 +555,7 @@
                                     <div class="mx-auto text-center mb-0 wow fadeInRight" data-wow-delay="0.5s" style="max-width:800px; padding-bottom: 40px; position:relative; z-index:2;">
                                         <!-- <img srse="width:230px; padding-top: 40px; height:auto; display:block; margin:0 auto;"/> -->
 
-                                        <h5 class="text-primary mb-0" style="margin-top: 20px; font-weight:bold; font-size:20px; 
+                                        <h5 class="text-primary mb-0" style="margin-top: 20px; font-weight:bold; font-size:26px; 
                                             font-family:'Tempting', sans-serif; color:#8a6920 !important;
                                             line-height: 2.0; word-break: break-word;">
                                         Moch. Adji Prasetyo
@@ -551,8 +569,8 @@
                                                     background: radial-gradient(circle at center, #8a6920 0%, #8a6920 70%);
                                                     color: #fff; 
                                                     border-radius: 50%; 
-                                                    width: 45px; 
-                                                    height: 45px; 
+                                                    width: 35px; 
+                                                    height: 35px; 
                                                     margin-top: 12px; 
                                                     box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
                                             <a href="https://www.instagram.com/adjipras17/" target="_blank" 
@@ -874,175 +892,187 @@
                         </div>
 
                         <!-- Kirim Hadiah -->
-                        <div id="gift" class="container-fluid position-relative" 
+                        <div id="gift" class="container-fluid position-relative"
                             style="width:100%; margin:0; padding:0; overflow:hidden; transition: all 0.6s ease;">
 
-                            <!-- Judul -->
-                            <div class="container py-0">
-                                <div class="mb-0 mt-4 text-center mx-auto wow zoomIn" 
-                                    data-wow-delay="0.6s" style="max-width: 800px;">
-                                    <h5 class="text-primary mb-0" 
-                                        style="font-weight: bold; margin-bottom: 0px; margin-top: 150px; font-size: 30px !important; 
-                                        font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
-                                        Kirim Hadiah
-                                    </h5>
-                                    <p style="margin-top: 40px; padding: 20px; text-align: center; 
-                                        font-family:'Alegreya Sans', sans-serif !important; 
-                                        color: #5a4632 !important; font-size: 18px;">
-                                        Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. 
-                                        Namun jika Anda ingin memberi hadiah, bisa melalui informasi dibawah ini.
-                                    </p>
+                            <!-- Wrapper box -->
+                            <div class="gift-box-wrapper">
+
+                                <!-- BOX putih transparan -->
+                                <div class="gift-box">
+
+                                    <!-- Judul -->
+                                    <div class="container py-0">
+                                        <div class="mb-0 mt-4 text-center mx-auto wow zoomIn"
+                                            data-wow-delay="0.6s" style="max-width: 800px;">
+
+                                            <h5 class="text-primary mb-0"
+                                                style="font-weight: bold; margin-bottom: 0px; margin-top: 40px; font-size: 30px !important;
+                                                font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
+                                                Wedding Gift
+                                            </h5>
+
+                                            <p style="margin-top: 20px; padding: 0 20px; text-align: center;
+                                                font-family:'Alegreya Sans', sans-serif !important;
+                                                color: #5a4632 !important; font-size: 18px;">
+                                                Do'a restu Anda merupakan karunia yang sangat berarti bagi kami, &
+                                                jika memberi adalah ungkapan tanda kasih,
+                                                Anda dapat memberi kado secara cashless.
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 text-center" style="margin-top: 30px;">
+
+                                        <!-- 🔘 Tombol Tampil/Sembunyi -->
+                                        <div class="col-12 text-center wow fadeInDown" data-wow-delay="0.6s">
+                                            <button id="toggleGiftBtn" type="button"
+                                                class="btn btn-dark mb-3"
+                                                style="font-family:'Alegreya Sans', sans-serif; 
+                                                    border-radius: 30px; 
+                                                    font-size: 14px; 
+                                                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+                                                <i class="fa fa-gift"></i>&nbsp;&nbsp; KLIK DISINI
+                                            </button>
+                                        </div>
+
+                                        <!-- 🔲 Wadah berisi dua card (Rekening + Hadiah) -->
+                                        <div id="giftContainer" class="fade-box" style="display:none;">
+
+                                            <!-- Card Rekening -->
+                                            <div class="row wow zoomIn" data-wow-delay="0.6s" 
+                                                style="margin: 0 auto 30px auto; width: 300px; border-radius: 30px; text-align: center;">
+                                                <div class="card p-0" 
+                                                    style="width: 100%; background-image: url('/static/img/rek2.png'); 
+                                                        background-position: center center; background-repeat: no-repeat; 
+                                                        background-size: cover; border-radius: 30px; padding: 7px;">
+                                                    <div class="card-body" 
+                                                        style="border-radius: 20px; padding-bottom: 10px; 
+                                                        font-family:'Alegreya Sans', sans-serif !important; 
+                                                        box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
+                                                        <i class="fas fa-money-check" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
+                                                        <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
+                                                            text-align: center; color: rgb(40, 51, 34);">
+                                                            Rekening
+                                                        </h4>
+                                                        <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
+                                                            font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
+                                                            margin-top: 10px;">
+                                                            Bank: <strong>Mandiri</strong> <br/>
+                                                            No. Rekening: <strong>1370020876187</strong> <br/>
+                                                            Nama: <strong>Moch Adji Prasetyo</strong>
+                                                        </p>
+
+                                                        <!-- Hidden nomor rekening -->
+                                                        <p id="textToCopy" style="position:absolute; left:-9999px; opacity:0;">1370020876187</p>
+
+                                                        <!-- Tombol Copy -->
+                                                        <div class="text-center mt-2">
+                                                            <a id="copyBtn" class="btn btn-sm" 
+                                                                style="border-radius: 30px; font-size: 15px; 
+                                                                font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
+                                                                Copy Rekening
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card Rekening -->
+                                            <div class="row wow zoomIn" data-wow-delay="0.6s" 
+                                                style="margin: 0 auto 30px auto; width: 300px; border-radius: 30px; text-align: center;">
+                                                <div class="card p-0" 
+                                                    style="width: 100%; background-image: url('/static/img/rek2.png'); 
+                                                        background-position: center center; background-repeat: no-repeat; 
+                                                        background-size: cover; border-radius: 30px; padding: 7px;">
+                                                    <div class="card-body" 
+                                                        style="border-radius: 20px; padding-bottom: 10px; 
+                                                        font-family:'Alegreya Sans', sans-serif !important; 
+                                                        box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
+                                                        <i class="fas fa-money-check" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
+                                                        <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
+                                                            text-align: center; color: rgb(40, 51, 34);">
+                                                            Rekening
+                                                        </h4>
+                                                        <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
+                                                            font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
+                                                            margin-top: 10px;">
+                                                            Bank: <strong>BCA</strong> <br/>
+                                                            No. Rekening: <strong>1690289942</strong> <br/>
+                                                            Nama: <strong>Irmma Dwijayanti</strong>
+                                                        </p>
+
+                                                        <!-- Hidden nomor rekening -->
+                                                        <p id="textToCopy2" style="position:absolute; left:-9999px; opacity:0;">1690289942</p>
+
+                                                        <!-- Tombol Copy -->
+                                                        <div class="text-center mt-2">
+                                                            <a id="copyBtn2" class="btn btn-sm" 
+                                                                style="border-radius: 30px; font-size: 15px; 
+                                                                font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
+                                                                Copy Rekening
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card Kirim Hadiah -->
+                                            <div class="row wow zoomIn" data-wow-delay="0.6s" 
+                                                style="margin: 0 auto; width: 300px; border-radius: 30px; 
+                                                    text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
+                                                <div class="card p-0" 
+                                                    style="width: 100%; background-image: url('/static/img/rek2.png'); 
+                                                        background-position: center center; background-repeat: no-repeat; 
+                                                        background-size: cover; border-radius: 30px; padding: 7px;">
+                                                    <div class="card-body" 
+                                                        style="border-radius: 30px; padding-bottom: 10px; 
+                                                            font-family:'Alegreya Sans', sans-serif !important; 
+                                                            box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
+                                                        <i class="fa fa-gift" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
+                                                        <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
+                                                            text-align: center; color: rgb(40, 51, 34);">
+                                                            Kirim Hadiah
+                                                        </h4>
+                                                        <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
+                                                            font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
+                                                            margin-top: 10px;">
+                                                            Nama Penerima: Irmma Dwijayanti <br/>
+                                                            No. telepon: 0813456778 <br/>
+                                                            Alamat: Gang Padepokan No.1 RT.3 RW.23, 
+                                                            Dusun Pereng Dawe, Balecatur, Gamping, Kab. Sleman, Gamping, 55295
+                                                        </p>
+
+                                                        <!-- Hidden alamat untuk dicopy -->
+                                                        <p id="alamatToCopy" style="position:absolute; left:-9999px; opacity:0;">
+                                                            Gang Padepokan No.1 RT.3 RW.23, 
+                                                            Dusun Pereng Dawe, Balecatur, Gamping, Kab. Sleman, Gamping, 55295
+                                                        </p>
+
+                                                        <!-- Tombol Copy Alamat -->
+                                                        <div class="text-center mt-2">
+                                                            <a id="copyAlamatBtn" class="btn btn-sm btn-dark" 
+                                                                style="border-radius: 30px; font-size: 15px; 
+                                                                    font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
+                                                                Copy Alamat
+                                                            </a>
+                                                        </div>
+                                                        <div style="text-align:center; margin-top:25px;">
+                                                            <a id="lokasi-btn-hadiah"
+                                                            href="https://www.google.com/maps/place/Padepokan+H+Saniman(%EA%A6%A5%EA%A6%A3%EA%A6%BA%EA%A6%A5%EA%A6%BA%EA%A6%B4%EA%A6%8F%EA%A6%A4%EA%A7%80%EA%A6%B2%EA%A7%80%EA%A6%B1%EA%A6%A4%EA%A6%B6%EA%A6%A9%EA%A6%A4%EA%A7%80)/@-7.8105808,110.2867478,748m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2e7af9198c2b0c03:0xc219989208ada85c!8m2!3d-7.8105808!4d110.2867478!16s%2Fg%2F11j2k_bbx9?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+                                                            target="_blank"
+                                                            style="font-weight: bold; font-family:'Alegreya Sans', sans-serif;">
+                                                            Lihat Alamat
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div> 
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="col-md-12 text-center" style="margin-top: 30px;">
-
-                                <!-- 🔘 Tombol Tampil/Sembunyi -->
-                                <div class="col-12 text-center wow fadeInDown" data-wow-delay="0.6s">
-                                    <button id="toggleGiftBtn" type="button"
-                                        class="btn btn-dark mb-3"
-                                        style="font-family:'Alegreya Sans', sans-serif; 
-                                            border-radius: 30px; 
-                                            font-size: 14px; 
-                                            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
-                                        <i class="fa fa-gift"></i>&nbsp;&nbsp; KIRIM HADIAH
-                                    </button>
-                                </div>
-
-                                <!-- 🔲 Wadah berisi dua card (Rekening + Hadiah) -->
-                                <div id="giftContainer" class="fade-box" style="display:none;">
-
-                                    <!-- Card Rekening -->
-                                    <div class="row wow zoomIn" data-wow-delay="0.6s" 
-                                        style="margin: 0 auto 30px auto; width: 300px; border-radius: 30px; text-align: center;">
-                                        <div class="card p-0" 
-                                            style="width: 100%; background-image: url('/static/img/rek2.png'); 
-                                                background-position: center center; background-repeat: no-repeat; 
-                                                background-size: cover; border-radius: 30px; padding: 7px;">
-                                            <div class="card-body" 
-                                                style="border-radius: 20px; padding-bottom: 10px; 
-                                                font-family:'Alegreya Sans', sans-serif !important; 
-                                                box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-                                                <i class="fa fa-university" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
-                                                <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
-                                                    text-align: center; color: rgb(40, 51, 34);">
-                                                    Rekening
-                                                </h4>
-                                                <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
-                                                    font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
-                                                    margin-top: 10px;">
-                                                    Bank: <strong>Mandiri</strong> <br/>
-                                                    No. Rekening: <strong>1370020876187</strong> <br/>
-                                                    Nama: <strong>Moch Adji Prasetyo</strong>
-                                                </p>
-
-                                                <!-- Hidden nomor rekening -->
-                                                <p id="textToCopy" style="position:absolute; left:-9999px; opacity:0;">1370020876187</p>
-
-                                                <!-- Tombol Copy -->
-                                                <div class="text-center mt-2">
-                                                    <a id="copyBtn" class="btn btn-sm" 
-                                                        style="border-radius: 30px; font-size: 15px; 
-                                                        font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
-                                                        Copy Rekening
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card Rekening -->
-                                    <div class="row wow zoomIn" data-wow-delay="0.6s" 
-                                        style="margin: 0 auto 30px auto; width: 300px; border-radius: 30px; text-align: center;">
-                                        <div class="card p-0" 
-                                            style="width: 100%; background-image: url('/static/img/rek2.png'); 
-                                                background-position: center center; background-repeat: no-repeat; 
-                                                background-size: cover; border-radius: 30px; padding: 7px;">
-                                            <div class="card-body" 
-                                                style="border-radius: 20px; padding-bottom: 10px; 
-                                                font-family:'Alegreya Sans', sans-serif !important; 
-                                                box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-                                                <i class="fa fa-university" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
-                                                <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
-                                                    text-align: center; color: rgb(40, 51, 34);">
-                                                    Rekening
-                                                </h4>
-                                                <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
-                                                    font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
-                                                    margin-top: 10px;">
-                                                    Bank: <strong>BCA</strong> <br/>
-                                                    No. Rekening: <strong>1690289942</strong> <br/>
-                                                    Nama: <strong>Irmma Dwijayanti</strong>
-                                                </p>
-
-                                                <!-- Hidden nomor rekening -->
-                                                <p id="textToCopy2" style="position:absolute; left:-9999px; opacity:0;">1690289942</p>
-
-                                                <!-- Tombol Copy -->
-                                                <div class="text-center mt-2">
-                                                    <a id="copyBtn2" class="btn btn-sm" 
-                                                        style="border-radius: 30px; font-size: 15px; 
-                                                        font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
-                                                        Copy Rekening
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card Kirim Hadiah -->
-                                    <div class="row wow zoomIn" data-wow-delay="0.6s" 
-                                        style="margin: 0 auto; width: 300px; border-radius: 30px; 
-                                            text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-                                        <div class="card p-0" 
-                                            style="width: 100%; background-image: url('/static/img/rek2.png'); 
-                                                background-position: center center; background-repeat: no-repeat; 
-                                                background-size: cover; border-radius: 30px; padding: 7px;">
-                                            <div class="card-body" 
-                                                style="border-radius: 30px; padding-bottom: 10px; 
-                                                    font-family:'Alegreya Sans', sans-serif !important; 
-                                                    box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-                                                <i class="fa fa-gift" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
-                                                <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
-                                                    text-align: center; color: rgb(40, 51, 34);">
-                                                    Kirim Hadiah
-                                                </h4>
-                                                <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
-                                                    font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
-                                                    margin-top: 10px;">
-                                                    Nama Penerima: Irmma Dwijayanti <br/>
-                                                    No. telepon: 0813456778 <br/>
-                                                    Alamat: Gang Padepokan No.1 RT.3 RW.23, 
-                                                    Dusun Pereng Dawe, Balecatur, Gamping, Kab. Sleman, Gamping, 55295
-                                                </p>
-
-                                                <!-- Hidden alamat untuk dicopy -->
-                                                <p id="alamatToCopy" style="position:absolute; left:-9999px; opacity:0;">
-                                                    Gang Padepokan No.1 RT.3 RW.23, 
-                                                    Dusun Pereng Dawe, Balecatur, Gamping, Kab. Sleman, Gamping, 55295
-                                                </p>
-
-                                                <!-- Tombol Copy Alamat -->
-                                                <div class="text-center mt-2">
-                                                    <a id="copyAlamatBtn" class="btn btn-sm btn-dark" 
-                                                        style="border-radius: 30px; font-size: 15px; 
-                                                            font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
-                                                        Copy Alamat
-                                                    </a>
-                                                </div>
-                                                <div style="text-align:center; margin-top:25px;">
-                                                    <a id="lokasi-btn-hadiah"
-                                                    href="https://www.google.com/maps/place/Padepokan+H+Saniman(%EA%A6%A5%EA%A6%A3%EA%A6%BA%EA%A6%A5%EA%A6%BA%EA%A6%B4%EA%A6%8F%EA%A6%A4%EA%A7%80%EA%A6%B2%EA%A7%80%EA%A6%B1%EA%A6%A4%EA%A6%B6%EA%A6%A9%EA%A6%A4%EA%A7%80)/@-7.8105808,110.2867478,748m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2e7af9198c2b0c03:0xc219989208ada85c!8m2!3d-7.8105808!4d110.2867478!16s%2Fg%2F11j2k_bbx9?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
-                                                    target="_blank"
-                                                    style="font-weight: bold; font-family:'Alegreya Sans', sans-serif;">
-                                                       Lihat Alamat
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div> 
                             </div>
                         </div>
                         
@@ -1077,18 +1107,13 @@
                         <!-- <div class="gold-separator"></div> -->
 
                         <!-- FOOTER -->
-                        <footer class="footer-custom text-center" 
-                            style="font-family: 'Alegreya Sans Medium', sans-serif !important;
-                            font-weight: bold;">
-                            <!-- Ikon sosmed -->
-                            <div class="sosmed-icons mb-3">
-                                <a href="#"><i class="fab fa-whatsapp"></i></a> 
-                                082302529354
-                                <!-- <a href="#"><i class="fas fa-globe"></i></a> -->
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                heroezweb
+                        <footer class="footer-custom">
+                            <p>Made with <span class="heart">❤</span> by Heroezweb</p>
+
+                            <div class="sosmed-icons">
+                                <a href="https://wa.me/6282302529354" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://instagram.com/heroezweb" target="_blank"><i class="fab fa-instagram"></i></a>
                             </div>
-                            
                         </footer>
 
                     </div>
@@ -1116,9 +1141,15 @@
         </a> -->
 
         <!-- Tombol Save The Date -->
+        <a class="nav-link sosmed" href="#" 
+        style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
+            <i class="fa fa-heart" style="color: #ffffff !important; font-size:22px;"></i>
+        </a>
+
+        <!-- Tombol Save The Date -->
         <a class="nav-link sosmed" href="#savethedate" 
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fa fa-calendar-check" style="color: #ffffff !important; font-size:22px;"></i>
+            <i class="fa fa-home" style="color: #ffffff !important; font-size:22px;"></i>
         </a>
 
         <!-- Tombol Galeri -->
@@ -1130,7 +1161,7 @@
         <!-- Tombol Acara -->
         <a class="nav-link sosmed" href="#acara" 
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fa fa-home" style="color: #ffffff !important; font-size:22px;"></i>
+            <i class="fas fa-calendar-alt" style="color: #ffffff !important; font-size:22px;"></i>
         </a>
 
         <!-- Tombol RSVP -->
