@@ -10,9 +10,9 @@
         <!-- Open Graph -->
         <meta property="og:title" content="Wedding of Irmma & Adji" />
         <meta property="og:description" content="Mari berbagi kebahagiaan di hari istimewa kami." />
-        <meta property="og:image" content="{{ url_for('static', filename='img/icon-url.png') }}"/>
+        <meta property="og:image" content="{{ url_for('static', filename='img/icon-url.png', _external=True) }}">
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Wedding of Irmma & Adji" />
+        <meta property="og:site_name" content="Wedding of Irmma & Adji" /> 
 
         <!-- Favicon (pilih satu saja) -->
         <link rel="shortcut icon" href="{{ url_for('static', filename='img/icon-url.png') }}" />
