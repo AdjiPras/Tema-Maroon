@@ -10,7 +10,9 @@
         <!-- Open Graph -->
         <meta property="og:title" content="Wedding of Irmma & Adji" />
         <meta property="og:description" content="Mari berbagi kebahagiaan di hari istimewa kami." />
-        <meta property="og:image" content="{{ url_for('static', filename='img/icon-url.png', _external=True) }}">
+        <meta property="og:image" content="{{ url_for('static', filename='img/icon-url.png') }}"/>
+        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Wedding of Irmma & Adji" /> 
 
@@ -126,8 +128,8 @@
                 color: #fff;
                 border: none;
                 border-radius: 50%;
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
                 font-size: 20px;
                 cursor: pointer;
                 display: flex;
@@ -498,13 +500,13 @@
                                     align-items:center; padding:40px 0; position:relative;">
 
                             <!-- Sapaan Awal (tetap di atas) -->
-                            <div class="mx-auto text-center mb-2 mt-0" id="mempelai" style="max-width:800px; padding-top:20px;">
+                            <div class="mx-auto text-center mb-2 mt-0" style="max-width:800px; padding-top:20px;">
                                 <p class="wow zoomIn" data-wow-delay="1.0s"  data-wow-offset="150"
                                  style="margin:0; padding-top: 90px; font-size: 20px; 
                                 font-family: 'Tempting', sans-serif; color:#8a6920 !important;">
                                 Assalamu'alaikum Warahmatullahi Wabarakatuh
                                 </p>
-                                <p class="mb-0 p-3" style="color: #5a4632 !important; font-size:16px; padding-top:20px; font-family:'Alegreya Sans', sans-serif;">
+                                <p class="mb-0 p-3" id="mempelai" style="color: #5a4632 !important; font-size:16px; padding-top:20px; font-family:'Alegreya Sans', sans-serif;">
                                 Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i 
                                 serta kerabat sekalian untuk menghadiri acara pernikahan kami :
                                 </p>
@@ -1140,16 +1142,16 @@
             <i class="fa fa-heart" style="color: #ffffff !important; font-size:22px;"></i>
         </a> -->
 
-        <!-- Tombol Save The Date -->
-        <a class="nav-link sosmed" href="#" 
+        <!-- Mempelai -->
+        <a class="nav-link sosmed" href="#mempelai" 
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fa fa-heart" style="color: #ffffff !important; font-size:22px;"></i>
+            <i class="fas fa-hand-holding-heart" style="color: #ffffff !important; font-size:22px;"></i>
         </a>
 
-        <!-- Tombol Save The Date -->
+        <!-- Save The Date -->
         <a class="nav-link sosmed" href="#savethedate" 
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fa fa-home" style="color: #ffffff !important; font-size:22px;"></i>
+            <i class="fa fa-calendar-check" style="color: #ffffff !important; font-size:22px;"></i>
         </a>
 
         <!-- Tombol Galeri -->
@@ -1161,7 +1163,7 @@
         <!-- Tombol Acara -->
         <a class="nav-link sosmed" href="#acara" 
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fas fa-calendar-alt" style="color: #ffffff !important; font-size:22px;"></i>
+            <i class="far fa-handshake" style="color: #ffffff !important; font-size:22px;"></i>
         </a>
 
         <!-- Tombol RSVP -->
@@ -1183,7 +1185,7 @@
     <!-- ===================== AUDIO PLAYER ===================== -->
     <div id="audio-container" style="display: none;">
         <audio id="song" loop muted>
-            <source src="{{ url_for('static', filename='song/song2.mp3') }}" type="audio/mpeg"/>
+            <source src="{{ url_for('static', filename='song/Enchanted.mp3') }}" type="audio/mpeg"/>
         </audio>
 
         <!-- Tombol Play/Pause -->
@@ -1435,6 +1437,11 @@
                 if (song) {
                     song.muted = false;
                     song.play();
+
+                    // ===================== SET ICON JADI PAUSE =====================
+                    const audioIcon = document.getElementById("audio-icon");
+                    audioIcon.classList.remove("fa-play");
+                    audioIcon.classList.add("fa-pause");
                 }
             }
 
