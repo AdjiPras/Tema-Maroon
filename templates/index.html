@@ -11,6 +11,8 @@
         <meta property="og:title" content="Wedding of Irmma & Adji" />
         <meta property="og:description" content="Mari berbagi kebahagiaan di hari istimewa kami." />
         <meta property="og:image" content="{{ url_for('static', filename='img/icon-url.png') }}"/>
+        <!-- untuk server -->
+        <!-- <meta property="og:image" content="{{ url_for('static', filename='img/icon-url-new.png', _external=True) }}"> -->
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
@@ -262,7 +264,7 @@
             top: 60%;              /* agak turun ke bawah */
             left: 50%;
             transform: translateX(-50%);
-            width: 250px;          /* lebih kecil dari konten */
+            width: 290px;          /* lebih kecil dari konten */
             height: 500px;         /* tinggi kotak (atur sesuai kebutuhan) */
             background: rgb(255, 255, 255);
             margin-top: 90px;
@@ -456,8 +458,8 @@
 
                                 <!-- dekor bawah (belakang box) -->
                                 <img src="{{ url_for('static', filename='img/dekor-ayat-bawah-2.svg') }}" 
-                                    style="width: 360px; height: auto; border-radius: 13px;
-                                        position: absolute; bottom: -130px; left: 50%; transform: translateX(-50%);
+                                    style="width: 410px; height: auto; border-radius: 13px;
+                                        position: absolute; bottom: -160px; left: 50%; transform: translateX(-50%);
                                         z-index: 0;"
                                     alt="">
 
@@ -1168,41 +1170,27 @@
             background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 50%);
             transition: background 0.3s ease-in-out;">
 
-        
-        <!-- Tombol mempelai -->
-        <!-- <a class="nav-link sosmed" href="#mempelai" 
-        style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fa fa-heart" style="color: #ffffff !important; font-size:22px;"></i>
-        </a> -->
-
         <!-- Mempelai -->
-        <!-- <a class="nav-link sosmed" href="#homewedding" 
+        <a class="nav-link sosmed" href="#mempelai"
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fas fa-envelope-open" style="color: #ffffff !important; font-size:22px;"></i>
-        </a> -->
-
-        <!-- Mempelai -->
-        <a class="nav-link sosmed" href="#mempelai" 
-        style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fas fa-heart" style="color: #ffffff !important; font-size:22px;"></i>
+            
+            <img src="{{ url_for('static', filename='img/love.png') }}"
+                alt="love"
+                style="width:27px; height:27px;">
         </a>
 
         <!-- Save The Date -->
         <a class="nav-link sosmed" href="#savethedate" 
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fas fa-calendar-check" style="color: #ffffff !important; font-size:22px;"></i>
+            <img src="{{ url_for('static', filename='img/mempelai.png') }}"
+                alt="love"
+                style="width:60px; height:60px;">
         </a>
-
-        <!-- Tombol Galeri -->
-        <!-- <a class="nav-link sosmed" href="#galeriwedding" 
-        style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fa fa-image" style="color: #ffffff !important; font-size:22px;"></i>
-        </a> -->
 
         <!-- Tombol Acara -->
         <a class="nav-link sosmed" href="#acara" 
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fas fa-hand-holding-heart" style="color: #ffffff !important; font-size:22px;"></i>
+            <i class="fas fa-calendar-check" style="color: #ffffff !important; font-size:22px;"></i>
         </a>
 
         <!-- Tombol RSVP -->
@@ -1214,10 +1202,8 @@
         <!-- Tombol Hadiah -->
         <a class="nav-link sosmed" href="#gift" 
         style="border-radius: 8px; display:flex; justify-content:center; align-items:center; width:45px; height:45px;">
-            <i class="fa fa-gift" style="color: #ffffff !important; font-size:22px;"></i>
+            <i class="fa fa-gift" style="color: #ffffff !important; font-size:20px;"></i>
         </a>
-
-        
 
     </nav>
 
