@@ -150,7 +150,7 @@
             .content-atas {
                 position: relative;  /* agar z-index berlaku */
                 z-index: 10;         /* lebih tinggi dari dekorasi */
-                margin-top: 60px;
+                margin-top: 120px;
             }
 
             /* VIDEO BG */
@@ -231,25 +231,41 @@
             .parallax-container {
             position: relative;
             width: 100%;
-            overflow-x: hidden;
+            overflow-x: auto;
             overflow-y: auto;
             perspective: 1px; /* trik parallax */
             height: auto;
             opacity: 0.3 #ede4d3;
             }
-
+            
             /* Background Parallax */
             .parallax-bg {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/static/img/bg-parallax-new.svg'); /* ganti dengan background utama */
+            /* background-image: url('/static/img/bg-parallax-new2.svg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: fixed; */
             z-index: -1;
+            }
+
+            /* Default: desktop/laptop */
+            .parallax-bg {
+                background-image: url('/static/img/bg-parallax-new2.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain; /* proporsional, tidak nge-zoom */
+                background-attachment: fixed;
+            }
+
+            /* Mobile / iPhone */
+            @media only screen and (max-width: 1024px) {
+                .parallax-bg {
+                    background-size: cover; /* selalu menutupi layar */
+                }
             }
 
             /* Konten di atas Parallax */
@@ -370,7 +386,7 @@
         <div class="col-md-1 col-lg-2 col-xl-3" style="background-color: #ffffff;">
         </div>
 
-        <!-- Kolom tengah HOME -->
+        <!-- Kolom tengah HOME --> 
         <div class="col-lg-5 col-md-10 col-xl-4 mx-auto">
             <body data-bs-spy="scroll" data-bs-target="#navBar" id="weddingHome" style="background-color: #ffffff;">
 
@@ -403,7 +419,7 @@
                             </h1>
                         </div>
                         
-                        <div class="content-atas" style="margin-top: 110px;">
+                        <div class="content-atas" style="">
                             <!-- <img src="{{ url_for('static', filename='img/home-icon.png') }}" 
                                 style="width: 260px; height: auto;"
                                 class="wow zoomIn" 
@@ -420,7 +436,7 @@
                                 Irmma <br> &amp; <br> Adji
                             </p><br>
                             <h4 style="position: relative; z-index: 10; 
-                                    margin-top: 40px;margin-bottom: 30px; padding:0; font-size:17px;
+                                    margin-top: 60px; margin-bottom: 30px; padding:0; font-size:17px;
                                     color: #5a4632 !important; text-shadow:var(--shadow);
                                     font-family:'Alegreya Sans', sans-serif !important;">
                                 Kepada Yth. <br> Bapak/Ibu/Saudara/i, <br>
