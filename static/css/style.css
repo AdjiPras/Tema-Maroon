@@ -612,6 +612,29 @@
     text-decoration: none;
 }
 
+/* COPY REKENING */
+#copyBtn3 { 
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: white !important; 
+    background: radial-gradient(circle at center, #a89b4f 0%, #8a6920 70%);
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    
+    /* Hilangkan tepi hitam */
+    border: none;
+    outline: none;
+}
+#copyBtn3:hover { 
+    color: #a89b4f !important; 
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f2de 50%, #ffffff 100%);
+    text-decoration: none;
+}
+
 #lokasi-btn-hadiah { 
     position: relative;
     overflow: hidden;
