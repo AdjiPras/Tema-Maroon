@@ -1086,47 +1086,50 @@
                                             </div>
 
                                             <!-- Card Rekening BRI -->
-                                            <div class="row wow zoomIn" data-wow-delay="0.6s" 
-                                                style="margin: 0 auto 30px auto; width: 300px; border-radius: 30px; text-align: center;">
-                                                <div class="card p-0" 
-                                                    style="width: 100%; background-image: url('/static/img/bg-hadiah.png'); 
-                                                        background-position: center center; background-repeat: no-repeat; 
-                                                        background-size: cover; border-radius: 30px; padding: 7px;">
-                                                    <div class="card-body" 
-                                                        style="border-radius: 20px; padding-bottom: 10px; 
-                                                        font-family:'Alegreya Sans', sans-serif !important; 
-                                                        box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-                                                        
-                                                        <i class="fas fa-money-check" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
-                                                        <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
-                                                            text-align: center; color: rgb(40, 51, 34);">
-                                                            Rekening
-                                                        </h4>
+                                            <div id="rekening-bri" style="display:none;">
+                                                <div class="row wow zoomIn" data-wow-delay="0.6s" 
+                                                    style="margin: 0 auto 30px auto; width: 300px; border-radius: 30px; text-align: center;">
+                                                    <div class="card p-0" 
+                                                        style="width: 100%; background-image: url('/static/img/bg-hadiah.png'); 
+                                                            background-position: center center; background-repeat: no-repeat; 
+                                                            background-size: cover; border-radius: 30px; padding: 7px;">
+                                                        <div class="card-body" 
+                                                            style="border-radius: 20px; padding-bottom: 10px; 
+                                                            font-family:'Alegreya Sans', sans-serif !important; 
+                                                            box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
+                                                            
+                                                            <i class="fas fa-money-check" style="font-size: 25px; color: rgb(40, 51, 34);"></i>
+                                                            <h4 style="font-family:'Alegreya Sans', sans-serif !important; 
+                                                                text-align: center; color: rgb(40, 51, 34);">
+                                                                Rekening
+                                                            </h4>
 
-                                                        <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
-                                                            font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
-                                                            margin-top: 10px;">
-                                                            Bank: <strong>BRI</strong> <br/>
-                                                            No. Rekening: <strong>0056-01-091527-50-7</strong> <br/>
-                                                            Nama: <strong>Sumaji</strong>
-                                                        </p>
+                                                            <p style="width: 100%; font-family:'Alegreya Sans', sans-serif !important; 
+                                                                font-size: 15px; text-align: center; color: rgb(40, 51, 34) !important; 
+                                                                margin-top: 10px;">
+                                                                Bank: <strong>BRI</strong> <br/>
+                                                                No. Rekening: <strong>0056-01-091527-50-7</strong> <br/>
+                                                                Nama: <strong>Sumaji</strong>
+                                                            </p>
 
-                                                        <!-- Hidden nomor rekening -->
-                                                        <p id="textToCopy3" style="position:absolute; left:-9999px; opacity:0;">
-                                                            005601091527507
-                                                        </p>
+                                                            <!-- Hidden nomor rekening -->
+                                                            <p id="textToCopy3" style="position:absolute; left:-9999px; opacity:0;">
+                                                                005601091527507
+                                                            </p>
 
-                                                        <!-- Tombol Copy -->
-                                                        <div class="text-center mt-2">
-                                                            <a id="copyBtn3" class="btn btn-sm" 
-                                                                style="border-radius: 30px; font-size: 15px; 
-                                                                font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
-                                                                Copy Rekening
-                                                            </a>
+                                                            <!-- Tombol Copy -->
+                                                            <div class="text-center mt-2">
+                                                                <a id="copyBtn3" class="btn btn-sm" 
+                                                                    style="border-radius: 30px; font-size: 15px; 
+                                                                    font-family:'Alegreya Sans', sans-serif !important; color: #ffffff;">
+                                                                    Copy Rekening
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            
 
 
                                             <!-- Card Kirim Hadiah -->
@@ -1463,18 +1466,63 @@
         };
 
         // Tombol copy alamat hadiah
-        document.getElementById("copyAlamatBtn").onclick = function () {
-            const text = document.getElementById("alamatToCopy").innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                Swal.fire({
-                    icon: "success",
-                    title: "Tersalin!",
-                    text: "Alamat pengiriman hadiah berhasil disalin.",
-                    confirmButtonColor: "#8a6920"
-                });
-            });
-        };
+        // document.getElementById("copyAlamatBtn").onclick = function () {
+        //     const text = document.getElementById("alamatToCopy").innerText;
+        //     navigator.clipboard.writeText(text).then(() => {
+        //         Swal.fire({
+        //             icon: "success",
+        //             title: "Tersalin!",
+        //             text: "Alamat pengiriman hadiah berhasil disalin.",
+        //             confirmButtonColor: "#8a6920"
+        //         });
+        //     });
+        // };
     </script>
+
+    
+    <!-- PENGECUALIAN BRI -->
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const rawNama = params.get("to");
+            if (!rawNama) return;
+
+            // Normalisasi nama tamu
+            const namaFix = decodeURIComponent(rawNama)
+                .toLowerCase()
+                .replace(/[.,]/g, "")
+                .replace(/-/g, " ")
+                .replace(/\s+/g, " ")
+                .trim();
+
+            // 🔐 PENGECUALIAN BRI (1 ORANG SAJA)
+            const pengecualianBRI = "gregorius lucky ariesta";
+
+            if (!namaFix.includes(pengecualianBRI)) return;
+
+            // Tampilkan rekening BRI
+            const briBox = document.getElementById("rekening-bri");
+            if (briBox) briBox.style.display = "block";
+
+            // Aktifkan tombol copy BRI (jika ada)
+            const copyBtnBRI = document.getElementById("copyBtn3");
+            if (copyBtnBRI) {
+                copyBtnBRI.addEventListener("click", function () {
+                    const text = document.getElementById("textToCopy3")?.innerText;
+                    if (!text) return;
+
+                    navigator.clipboard.writeText(text).then(() => {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Tersalin!",
+                            text: "Nomor rekening BRI berhasil disalin.",
+                            confirmButtonColor: "#8a6920"
+                        });
+                    });
+                });
+            }
+        })();
+        </script>
 
     <!-- ===================== COUNTDOWN ACARA ===================== -->
     <script>
