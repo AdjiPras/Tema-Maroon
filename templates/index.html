@@ -376,6 +376,21 @@
                 margin-top: 60px;
             }
 
+            @media (max-width: 768px) {
+                .parallax-bg,
+                .wedding-gallery {
+                    background-attachment: scroll !important;
+                }
+
+                .wow {
+                    animation: none !important;
+                }
+
+                .parallax-container {
+                    overflow: hidden;
+                }
+            }
+
         </style>
 
         </meta>
@@ -1534,6 +1549,36 @@
                 });
             }
         })();
+    </script>
+
+    <script>
+        setTimeout(() => {
+            const namaTamu = (urlParams.get("to") || "")
+                .toLowerCase()
+                .replace(/\./g, "")
+                .trim();
+
+            const bcaOnlyGuests = [
+                "santoso","datun","amirudin","abdul wahib","ramelan",
+                "l budiman","dedi saputra","ari","suroto a","suroto b",
+                "casidi","karyawan","ismail","suwarno","subeki",
+                "suripto","i nyoman untung","wasta","juarsa","rumadi","purwoko"
+            ];
+
+            const rekeningMandiri = document.getElementById("rekening-mandiri");
+            const rekeningBCA = document.getElementById("rekening-bca");
+            const rekeningBRI = document.getElementById("rekening-bri");
+
+            const isBCAOnly = bcaOnlyGuests.some(nama =>
+                namaTamu.includes(nama)
+            );
+
+            if (isBCAOnly) {
+                if (rekeningMandiri) rekeningMandiri.style.setProperty("display", "none", "important");
+                if (rekeningBRI) rekeningBRI.style.setProperty("display", "none", "important");
+                if (rekeningBCA) rekeningBCA.style.setProperty("display", "block", "important");
+            }
+        }, 300);
     </script>
 
     <!-- ===================== COUNTDOWN ACARA ===================== -->
