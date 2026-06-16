@@ -430,6 +430,9 @@
     .footer .text-end {
         text-align: center !important;
     }
+    .fixed-bottom {
+        width: 350px !important; /* Ukuran yang lebih proporsional untuk desktop */
+    }
 }
 /*** Footer End ***/
 
@@ -965,6 +968,9 @@
       left: -14px;
       right: auto;
     }
+    .fixed-bottom {
+        width: 350px !important; /* Ukuran yang lebih proporsional untuk desktop */
+    }
 
 /* ========================================== */
     .containernya > a {
@@ -1023,4 +1029,3 @@
         grid-column: span 2;
         grid-row: span 2;
       }
-      
